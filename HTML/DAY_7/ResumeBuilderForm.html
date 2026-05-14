@@ -1,0 +1,154 @@
+<html>
+<head>
+    <title>Resume Builder Form</title>
+</head>
+
+<body bgcolor="white">
+
+    <center>
+
+        <h1>Resume Builder Form</h1>
+
+        <form>
+
+            <!-- Personal Details -->
+            <fieldset>
+                <legend><b>Personal Details</b></legend>
+
+                <label>Full Name:</label>
+                <br>
+                <input type="text" placeholder="Enter your full name">
+                <br><br>
+
+                <label>Email:</label>
+                <br>
+                <input type="email" placeholder="Enter your email">
+                <br><br>
+
+                <label>Phone Number:</label>
+                <br>
+                <input type="tel" placeholder="Enter mobile number">
+                <br><br>
+
+                <label>Date of Birth:</label>
+                <br>
+                <input type="date">
+                <br><br>
+
+                <label>Gender:</label>
+                <br>
+                <input type="radio" name="gender"> Male
+                <input type="radio" name="gender"> Female
+                <br><br>
+
+                <label>Address:</label>
+                <br>
+                <textarea rows="4" cols="35" placeholder="Enter your address"></textarea>
+
+            </fieldset>
+
+            <br>
+
+            <!-- Education Details -->
+            <fieldset>
+                <legend><b>Education Details</b></legend>
+
+                <label>Highest Qualification:</label>
+                <br>
+
+                <select>
+                    <option>Diploma</option>
+                    <option>Bachelor Degree</option>
+                    <option>Master Degree</option>
+                    <option>PhD</option>
+                </select>
+
+                <br><br>
+
+                <label>College Name:</label>
+                <br>
+                <input type="text" placeholder="Enter college name">
+                <br><br>
+
+                <label>Department:</label>
+                <br>
+                <input type="text" placeholder="Enter department">
+                <br><br>
+
+                <label>Year of Passing:</label>
+                <br>
+                <input type="number" placeholder="Enter passing year">
+
+            </fieldset>
+
+            <br>
+
+            <!-- Skills -->
+            <fieldset>
+                <legend><b>Skills</b></legend>
+
+                <input type="checkbox"> HTML
+                <br>
+
+                <input type="checkbox"> CSS
+                <br>
+
+                <input type="checkbox"> JavaScript
+                <br>
+
+                <input type="checkbox"> Python
+                <br>
+
+                <input type="checkbox"> C++
+                <br>
+
+                <input type="checkbox"> SQL
+
+            </fieldset>
+
+            <br>
+
+            <!-- Experience -->
+            <fieldset>
+                <legend><b>Experience</b></legend>
+
+                <label>Years of Experience:</label>
+                <br>
+                <input type="number" placeholder="Enter experience">
+                <br><br>
+
+                <label>Previous Company:</label>
+                <br>
+                <input type="text" placeholder="Enter company name">
+                <br><br>
+
+                <label>Work Description:</label>
+                <br>
+                <textarea rows="5" cols="35" placeholder="Describe your work experience"></textarea>
+
+            </fieldset>
+
+            <br>
+
+            <!-- File Upload -->
+            <fieldset>
+                <legend><b>Upload Resume</b></legend>
+
+                <label>Select Resume File:</label>
+                <br>
+                <input type="file">
+
+            </fieldset>
+
+            <br>
+
+            <!-- Buttons -->
+            <input type="submit" value="Create Resume">
+            <input type="reset" value="Clear Form">
+
+        </form>
+
+    </center>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<html>
+<head>
+    <title>College Admission Form</title>
+</head>
+
+<body bgcolor="white">
+
+    <center>
+
+        <h1>College Admission Form</h1>
+
+        <form>
+
+            <!-- Personal Details -->
+            <fieldset>
+                <legend><b>Personal Details</b></legend>
+
+                <label>Student Name:</label>
+                <br>
+                <input type="text" placeholder="Enter your name">
+                <br><br>
+
+                <label>Email:</label>
+                <br>
+                <input type="email" placeholder="Enter your email">
+                <br><br>
+
+                <label>Phone Number:</label>
+                <br>
+                <input type="tel" placeholder="Enter mobile number">
+                <br><br>
+
+                <label>Date of Birth:</label>
+                <br>
+                <input type="date">
+                <br><br>
+
+                <label>Gender:</label>
+                <br>
+                <input type="radio" name="gender"> Male
+                <input type="radio" name="gender"> Female
+                <br><br>
+
+            </fieldset>
+
+            <br>
+
+            <!-- Course Details -->
+            <fieldset>
+                <legend><b>Course Details</b></legend>
+
+                <label>Select Department:</label>
+                <br>
+
+                <select>
+
+                    <!-- Engineering Courses -->
+                    <optgroup label="Engineering Courses">
+                        <option>CSE - Computer Science</option>
+                        <option>ECE - Electronics</option>
+                        <option>EEE - Electrical</option>
+                        <option>MECH - Mechanical</option>
+                        <option>CIVIL - Civil</option>
+                    </optgroup>
+
+                    <!-- Arts Courses -->
+                    <optgroup label="Arts & Science Courses">
+                        <option>BCA</option>
+                        <option>B.Sc Computer Science</option>
+                        <option>B.Com</option>
+                        <option>BA English</option>
+                    </optgroup>
+
+                </select>
+
+                <br><br>
+
+                <label>Preferred Shift:</label>
+                <br>
+
+                <select>
+                    <option>Morning</option>
+                    <option>Evening</option>
+                </select>
+
+            </fieldset>
+
+            <br>
+
+            <!-- Address Details -->
+            <fieldset>
+                <legend><b>Address Details</b></legend>
+
+                <label>Address:</label>
+                <br>
+                <textarea rows="5" cols="35" placeholder="Enter your address"></textarea>
+
+                <br><br>
+
+                <label>Select City:</label>
+                <br>
+
+                <select>
+                    <option>Chennai</option>
+                    <option>Coimbatore</option>
+                    <option>Madurai</option>
+                    <option>Salem</option>
+                    <option>Trichy</option>
+                </select>
+
+            </fieldset>
+
+            <br>
+
+            <!-- Buttons -->
+            <input type="submit" value="Apply Now">
+            <input type="reset" value="Clear Form">
+
+        </form>
+
+    </center>
+
+</body>
+</html>
