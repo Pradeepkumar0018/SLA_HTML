@@ -1,0 +1,147 @@
+1.What is HTML and why is it called a markup language?
+          HTML (HyperText Markup Language) is the standard language used to create and structure content on web pages. It tells a web browser what each part of a page is—for example, headings, paragraphs, images, links, tables, and more.HTML organizes content using elements (tags) 
+          HTML is called a markup language because it “marks up” text with tags to describe its structure and meaning.The word “markup” comes from editors marking documents with notes like “title”, “bold”, or “insert image”
+
+2.What is the difference between HTML and HTML5?
+          HTML and HTML5 are both markup languages used to create web pages, but HTML5 is the latest and improved version of HTML with new features and better support for modern websites
+
+                           HTML                                       HTML5                                  
+1. Older version of HTML                                             1. Latest version of HTML                                          
+2. Limited multimedia support                                        2. Supports audio and video directly                               
+3. Uses plugins like Flash for media                                 3. No need for external plugins                                    
+4. Does not support semantic tags properly                           4. Supports semantic tags like <header>, <footer>, <article> 
+5. Limited form input types                                          5. Provides new input types like email, date, range                
+6. No built-in support for graphics                                  6. Supports Canvas and SVG graphics                                
+7. Less mobile-friendly                                              7. More mobile-friendly and responsive  
+
+3.What is the purpose of <!DOCTYPE html> in HTML?
+          <!DOCTYPE html> is a declaration used at the beginning of an HTML document. It tells the web browser that the document is written in HTML5
+Purpose:
+         Helps the browser display the webpage correctly.
+         Ensures the browser follows standard HTML5 rules.
+         Prevents errors and compatibility issues.
+         Activates standard mode in the browser.                           
+
+4.What is the difference between tags and elements in HTML?
+
+1.Tags are predefined keyword  in Html .Enclosed in angle bracket (<>).
+        *single marker 
+        *Angle bracket and a keyword
+        *Tags can be opening or closing tags
+        *Example: <h1>
+2.Element that are contain opening tags and closing tags and center content in element
+        *Full structure and content
+        *start tags +content +end tags
+        *Elements may contain text, images, links, etc.
+        *Examples:<h1>Welcome</h1>
+
+5.What are semantic tags? Give examples.
+        Semantic tags in HTML are elements that clearly describe the meaning and role both to answer and to developers .Unlike non-semantic tags such as <div> or <span>,semantic tags convey information about the content they enclose,improving structure,accesibility and search engine optimization(SEO)
+Examples of Semantic Tags:
+               <header> → Defines the header section
+               <footer> → Defines the footer section
+               <article> → Defines an article or content
+               <section> → Defines a section in a webpage
+               <nav> → Defines navigation links
+               <aside> → Defines side content 
+Examples:
+<header>
+    <h1>My Website</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+</nav>
+
+<section>
+    <p>Welcome to the website</p>
+</section>
+
+<footer>
+    <p>Copyright 2026</p>
+</footer>
+
+6.What is the difference between semantic and non-semantic tags?
+Semantic tags:
+              *Describe the meaning of the content
+              *Easy to understand
+              *Improves webpage structure
+              *Helps in SEO and accessibility
+              *Examples: <header>, <footer>, <article>
+Non-Semantic tags:
+             *Do not describe the meaning of the content
+             *Difficult to understand
+             *Used mainly for styling and grouping
+             *Does not help much in SEO
+             *Examples: <div>, <span>
+
+7.What are meta tags and why are they used?
+Meta tags are special tags used inside the <head> section of an HTML document.
+They provide information about the webpage to browsers and search engines.
+
+Uses of Meta Tags:
+             *Define character encoding
+             *Improve SEO (Search Engine Optimization)
+             *Make webpages responsive on mobile devices
+             *Provide page description and keywords
+Common Meta Tags:
+            *<meta charset="UTF-8"> → Defines character encoding
+            *<meta name="viewport" content="width=device-width, initial-scale=1.0"> → Makes webpage mobile-friendly
+            *<meta name="description" content="Webpage description"> → Gives webpage description
+Examples :
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+</head>
+
+8.Why do we use the <source> tag inside audio and video tags?
+The <source> tag is used inside <audio> and <video> tags to specify media files like audio or video.
+
+Why it is used:
+          *Supports different file formats
+          *Helps browsers choose a compatible file
+          *Improves media compatibility across browsers
+Example:
+<audio controls>
+    <source src="song.mp3" type="audio/mp3">
+</audio>
+
+<video controls>
+    <source src="movie.mp4" type="video/mp4">
+</video>
+
+9.What is iframe and where is it used in real-time applications?
+An iFrame (Inline Frame) is an HTML tag used to display another webpage, video, map, or document inside the current webpage.
+Syntax:
+        <iframe src="https://example.com"></iframe>
+Uses of iFrame in Real-Time Applications:
+         *Embedding YouTube videos
+         *Showing Google Maps
+         *Displaying another website inside a webpage
+         *Adding online documents or forms
+         *Embedding payment gateways or advertisements
+Example:
+<iframe 
+src="https://www.youtube.com" 
+width="400" 
+height="300">
+</iframe>
+
+10.What is the difference between block-level elements and inline elements? 
+Block-level elements:
+                 *Start on a line 
+                 *Take full width of the webpage 
+                 *Used for large location
+                 *Can contain inline elements
+                 *Examples: <div>, <p>, <h1>
+Inline elements:
+                 *Do not start on a new line
+                 *Take only required width
+                 *Used for small content
+                 *Usually contain text only
+                 *Examples: <span>, <a>, <b>
+Example:
+<p>This is a block element</p>
+
+<span>This is an inline element</span>
