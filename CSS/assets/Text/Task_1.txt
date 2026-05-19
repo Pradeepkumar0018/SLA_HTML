@@ -1,0 +1,96 @@
+<h1 style ="color:blue:font-size:100px:">welcome</h1>
+<h1 style ="color:blue:font-size:100px:">welcome</h1>
+<h1 style ="color:blue:font-size:100px:">welcome</h1>
+<h1 style ="color:blue:font-size:100px:">welcome</h1>
+<h1 style ="color:blue:font-size:100px:">welcome</h1>
+<h1 style ="color:blue:font-size:100px:">welcome</h1>
+<h1 style ="color:blue:font-size:100px:">welcome</h1>
+<h1 style ="color:blue:font-size:100px:">welcome</h1>
+<h1 style ="color:blue:font-size:100px:">welcome</h1>
+<h1 style ="color:blue:font-size:100px:">welcome</h1>
+<h1 style ="color:blue:font-size:100px:">welcome</h1>
+<h1 style ="color:blue:font-size:100px:">welcome</h1>
+<h1 style ="color:blue:font-size:100px:">welcome</h1>
+<h1 style ="color:blue:font-size:100px:">welcome</h1>
+<h1 style ="color:blue:font-size:100px:">welcome</h1>
+<h1 style ="color:blue:font-size:100px:">welcome</h1>
+<h1 style ="color:blue:font-size:100px:">welcome</h1>
+<h1 style ="color:blue:font-size:100px:">welcome</h1>
+<h1 style ="color:blue:font-size:100px:">welcome</h1>
+<h1 style ="color:blue:font-size:100px:">welcome</h1>
+
+h1{
+    color:blue
+    font-size:100px
+    background-color:red
+}
+h1{
+    color:blue
+    font-size:100px
+    background-color:red
+}
+h1{
+    color:blue
+    font-size:100px
+    background-color:red
+}
+h1{
+    color:blue
+    font-size:100px
+    background-color:red
+}
+h1{
+    color:blue
+    font-size:100px
+    background-color:red
+}
+h1{
+    color:blue
+    font-size:100px
+    background-color:red
+}
+h1{
+    color:blue
+    font-size:100px
+    background-color:red
+}
+h1{
+    color:blue
+    font-size:100px
+    background-color:red
+}
+h1{
+    color:blue
+    font-size:100px
+    background-color:red
+}
+h1{
+    color:blue
+    font-size:100px
+    background-color:red
+}
+h1{
+    color:blue
+    font-size:100px
+    background-color:red
+}
+h1{
+    color:blue
+    font-size:100px
+    background-color:red
+}
+h1{
+    color:blue
+    font-size:100px
+    background-color:red
+}
+h1{
+    color:blue
+    font-size:100px
+    background-color:red
+}
+h1{
+    color:blue
+    font-size:100px
+    background-color:red
+}

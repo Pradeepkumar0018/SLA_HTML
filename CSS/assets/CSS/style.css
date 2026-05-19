@@ -1,0 +1,21 @@
+body{
+    background-color: lightyellow;
+    font-family: Arial, sans-serif;
+}
+
+div{
+    background-color: darkblue;
+    padding: 20px;
+    margin: 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+p{
+    color: white;
+    font-size: 22px;
+}
+
+b{
+    color: yellow;
+}
