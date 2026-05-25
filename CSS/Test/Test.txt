@@ -1,0 +1,189 @@
+1. What is CSS and why is it used?
+   CSS(cascading Style Sheet) is a stylesheet language used to design and style HTML webpages
+   It is used for:
+         *Adding colors,fonts,spacing and layouts
+   Ex: h1{
+         color: blue;
+         font-size:  30px;     
+       }
+
+2.What are the three types of CSS?
+  The three types are:
+            1.Inline CSS
+            2.Internal CSS
+            3.External CSS
+
+3.Difference between Inline, Internal, and External CSS?
+  Type              Where written              Example                Usage
+
+1.Inline CSS        Inside HTML element        style=""               Small quick styling
+
+2.Internal CSS      Inside <style> tag in      <style>...</style>     Single page styling
+                    same HTML file
+
+3.External CSS      Seperate .css file         style.css              Multiple pages/projects
+
+Inline CSS example       : <p style="color:red;">Hello</p>
+Internal CSS example     : <style>
+                           p{
+                            color:red;
+                            }
+                            </style>
+External CSS example     : <link rel="stylesheet" href="style.css">
+
+4.Which CSS type has highest priority?
+  Priority order:
+              Inline CSS (Highest)
+              Internal CSS
+              External CSS
+
+   But !important can override normal priority.
+
+Example:
+</>CSS
+color: red !important;
+
+5.Which CSS method is mostly used in real-time projects?
+  External CSS is mostly used because:
+
+           *Code becomes reusable
+           *Easy maintenance
+           *Better performance
+           *Cleaner HTML
+
+6.What are CSS selectors?
+ Selectors are used to target HTML elements for styling.
+ Examples:
+         </>CSS
+         h1{ }
+         .classname { }
+         #idname { }
+         * { }
+  Types:
+         *Element Selector
+         *Class Selector
+         *ID Selector
+         *Universal Selector
+         *Group Selector
+
+7.Difference between Class Selector and ID Selector?
+          Class Selectors                             Id Selectors
+  1.Uses.                                             Uses #
+  2.Can be used multiple times                        Used only once 
+  3.Less specific                                     More specific
+
+  Example:
+          </> CSS
+          .box {
+           color: blue;
+          }
+          
+          #header {
+             color: red;
+           }
+
+8.Purpose of Universal Selector in CSS?
+  The universal selector * selects all HTML elements
+  Example:
+         </> CSS
+         * {
+           margin: 0;
+           padding: 0;
+         }
+
+9.What is cascading in CSS?
+  “Cascading” means CSS decides which style to apply when multiple styles target the same         element
+The decision is based on: 
+          1.Priority
+          2.Specificity
+          3.Source order
+Examaple:
+        </> CSS
+        p {
+          color: blue;
+          }
+        
+        p {
+          color: red;
+          }
+
+10.What is specificity in CSS?
+   Specificity decides which CSS rule is more important
+   Priority:
+            1.Inline styles
+            2.IDs
+            3.Classes/attributes
+            4.Elements
+   Examples:
+            </> CSS 
+            #title {
+            color: red;
+            }
+          
+            .title {
+              color: blue;
+            }
+
+11.Difference between block and inline elements?
+              Block Elements                             Inline Elements
+
+   *Take Full width                                      *Take only needed width        
+   *Start on new line                                    *Stay in same line
+   *Can set width/height                                 *Width/height usually ignored
+
+  Block Examples:
+  </> HTML
+  <div>, <p>, <h1>
+
+  Inline Examples:
+  </> HTML
+  <span>, <a>, <b>
+
+12.What is Flexbox and why is it used?
+   Flexbox is a CSS layout system used to align and distribute items efficiently
+   Used for:
+            *Responsive layouts 
+            *Centering elements 
+            *Horizontal & Vertical alignment
+            *Space distribution
+  Examples:
+           </> CSS
+           .container {
+            display: flex;
+           }
+
+13.Difference between justify-content and align-items?
+      Property                                         Works On
+   1.Justify-content                                   Main axis(horizontal by default)
+   2.align-items                                       Cross axis(vertical by default)
+  Example:
+          </> CSS
+          .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+14.Difference between px, em, rem, and % 
+       Unit                                          Meaning
+    1.px                                             Fixed size
+    2.em                                             Relative to parent front-size
+    3.rem                                            Relative to root(html)front-size
+    4.%                                              Relative to parent size
+   Examples:
+            </> CSS
+            font-size: 26px;
+            width: 50%;
+            padding: 2em;
+            margin: 1rem;
+
+15.Difference between RGB, RGBA, and HEX colors
+      Type                 Example                  Feature
+   1.RGB                   rgb(255,0,0)             Red,Green,Blue
+   2.RGBA                  rgba(255,0,0,0.5)        RGB + transparency
+   3.HEX                   #ff0000                  Hexadecimal color code
+  Example:
+          </> CSS
+          color: rgb(0,0,255);
+          background: rgba(0,0,255,0.5);
+          border-color:  #0000ff;
