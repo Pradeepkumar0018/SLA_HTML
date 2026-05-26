@@ -15,9 +15,6 @@ header{
     background-color:white;
     padding:15px 40px;
     box-shadow:0 2px 5px rgba(0,0,0,0.1);
-    position:sticky;
-    top:0;
-    z-index:100;
 }
 
 .top-header{
@@ -36,7 +33,6 @@ header{
 
 .search-box{
     width:45%;
-    position:relative;
 }
 
 .search-box input{
@@ -46,7 +42,6 @@ header{
     border-radius:30px;
     background:#f0f0f0;
     font-size:16px;
-    outline:none;
 }
 
 /* ICONS */
@@ -59,38 +54,31 @@ header{
 
 .icons div{
     text-align:center;
-    font-size:14px;
     cursor:pointer;
 }
-
-/* IMAGE ICONS */
 
 .icon-img{
     width:30px;
     height:30px;
-    object-fit:contain;
     margin-bottom:5px;
 }
 
 .icons p{
     font-size:14px;
-    font-weight:500;
 }
 
 /* NAVBAR */
 
 nav{
     margin-top:20px;
-    display:flex;
-    gap:40px;
-    font-size:18px;
 }
 
 nav a{
     text-decoration:none;
     color:black;
+    margin-right:40px;
+    font-size:18px;
     font-weight:500;
-    transition:0.3s;
 }
 
 nav a:hover{
@@ -105,15 +93,15 @@ nav a:hover{
     height:170px;
     background:linear-gradient(to right,#2f46d6,#4059ff);
     border-radius:10px;
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
     color:white;
     overflow:hidden;
 }
 
 .offer-box{
+    width:33%;
+    float:left;
     text-align:center;
+    padding-top:40px;
 }
 
 .offer-box h1{
@@ -134,11 +122,6 @@ nav a:hover{
     font-size:16px;
     cursor:pointer;
     font-weight:bold;
-    transition:0.3s;
-}
-
-.offer-box button:hover{
-    background:#e6e6e6;
 }
 
 /* CATEGORY SECTION */
@@ -146,22 +129,18 @@ nav a:hover{
 .categories{
     width:92%;
     margin:30px auto;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
+    overflow:hidden;
 }
 
 .card{
+    width:23%;
+    float:left;
+    margin:1%;
     background:white;
     border-radius:8px;
     overflow:hidden;
     box-shadow:0 2px 5px rgba(0,0,0,0.1);
     cursor:pointer;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
 }
 
 .card img{
@@ -186,17 +165,18 @@ nav a:hover{
     background-size:cover;
     background-position:center;
     border-radius:15px;
-    display:flex;
-    align-items:center;
-    padding-left:60px;
     color:white;
     position:relative;
-    overflow:hidden;
+    padding-left:60px;
+    padding-top:140px;
 }
 
 .overlay{
     position:absolute;
-    inset:0;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
     background:rgba(0,0,0,0.4);
     border-radius:15px;
 }
@@ -224,11 +204,6 @@ nav a:hover{
     color:white;
     font-size:18px;
     cursor:pointer;
-    transition:0.3s;
-}
-
-.hero-content button:hover{
-    background:#005fa3;
 }
 
 /* PRODUCTS */
@@ -236,6 +211,7 @@ nav a:hover{
 .products{
     width:92%;
     margin:50px auto;
+    overflow:hidden;
 }
 
 .products h2{
@@ -243,22 +219,14 @@ nav a:hover{
     font-size:35px;
 }
 
-.product-container{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
-}
-
 .product{
+    width:23%;
+    float:left;
+    margin:1%;
     background:white;
     border-radius:10px;
     overflow:hidden;
     box-shadow:0 3px 8px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-
-.product:hover{
-    transform:scale(1.03);
 }
 
 .product img{
@@ -288,12 +256,13 @@ footer{
     color:white;
     padding:50px;
     margin-top:50px;
+    overflow:hidden;
 }
 
-.footer-container{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:30px;
+.footer-container div{
+    width:23%;
+    float:left;
+    margin:1%;
 }
 
 footer h3{
@@ -304,4 +273,3 @@ footer p{
     margin-bottom:10px;
     color:#ccc;
 }
-
