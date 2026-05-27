@@ -1,0 +1,166 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color:#f3f3f3;
+}
+
+
+/* HEADER */
+
+header{
+    background-color:#021a3a;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 40px;
+}
+
+
+/* LEFT NAV */
+
+.left-nav{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.left-nav h2{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.line{
+    width:2px;
+    height:30px;
+    background-color:gray;
+}
+
+.copy-btn{
+    background:none;
+    border:1px solid gray;
+    color:white;
+    padding:10px 18px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+
+/* RIGHT NAV */
+
+.right-nav{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.icon-box{
+    width:45px;
+    height:45px;
+    border:1px solid gray;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+}
+
+.preview-btn{
+    background:none;
+    border:1px solid gray;
+    color:white;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+
+/* MENU */
+
+nav{
+    background-color:#021a3a;
+    padding:0 40px 20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-right:30px;
+    font-size:16px;
+    padding-bottom:10px;
+}
+
+nav a.active{
+    color:#ff5b2e;
+    border-bottom:3px solid #ff5b2e;
+}
+
+
+/* MAIN BOX */
+
+.main-box{
+    background:white;
+    width:85%;
+    margin:40px auto;
+    padding:50px;
+    border-radius:20px;
+}
+
+.main-box h1{
+    color:#2c3e50;
+    margin-bottom:15px;
+}
+
+.sub-text{
+    font-size:18px;
+    margin-bottom:30px;
+    color:#444;
+}
+
+.url{
+    font-size:18px;
+    margin-bottom:40px;
+}
+
+.url a{
+    color:#4d73ff;
+    text-decoration:none;
+}
+
+.url span{
+    margin-left:10px;
+    text-decoration:underline;
+    cursor:pointer;
+}
+
+.main-box h2{
+    color:#2c3e50;
+    margin-bottom:20px;
+}
+
+.description{
+    font-size:20px;
+    color:#333;
+    margin-bottom:40px;
+}
+
+.category{
+    font-size:22px;
+    color:#333;
+}
+
+.image{
+    padding: 30px;
+    margin-left: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    border-radius: 10px;
+}
