@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete CSS Concepts Guide</title>
+    <link rel="stylesheet" href="../assets/CSS/css_conc.css">
+</head>
+<body>
+
+    <!-- HEADER SECTION -->
+
+    <header>
+        <h1>Complete CSS Concepts Guide</h1>
+        <p>Learn CSS from Basics to Advanced Concepts</p>
+    </header>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#history">History</a></li>
+            <li><a href="#types">Types of CSS</a></li>
+            <li><a href="#syntax">Syntax</a></li>
+            <li><a href="#selectors">Selectors</a></li>
+            <li><a href="#colors">Colors</a></li>
+            <li><a href="#background">Background</a></li>
+            <li><a href="#text">Text</a></li>
+            <li><a href="#fonts">Fonts</a></li>
+            <li><a href="#boxmodel">Box Model</a></li>
+            <li><a href="#margin">Margin</a></li>
+            <li><a href="#padding-topic">Padding</a></li>
+            <li><a href="#border-topic">Border</a></li>
+            <li><a href="#size">Width & Height</a></li>
+            <li><a href="#display">Display</a></li>
+            <li><a href="#flexbox">Flexbox</a></li>
+            <li><a href="#grid">Grid</a></li>
+            <li><a href="#responsive">Responsive Design</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- INTRODUCTION -->
+
+        <section id="intro">
+            <h2>1. Introduction to CSS</h2>
+
+            <p>
+                CSS stands for Cascading Style Sheets.
+                It is used to style HTML documents and control
+                colors, layouts, spacing, fonts, and animations.
+            </p>
+
+            <p>
+                CSS separates the presentation layer from
+                the content layer, making websites easier
+                to maintain and update.
+            </p>
+
+            <h3>Why CSS is Important?</h3>
+
+            <ul>
+                <li>Improves website appearance</li>
+                <li>Makes pages responsive</li>
+                <li>Provides consistency</li>
+                <li>Reduces code repetition</li>
+                <li>Enhances user experience</li>
+            </ul>
+        </section>
+
+        <!-- HISTORY -->
+
+        <section id="history">
+            <h2>2. History of CSS</h2>
+
+            <p>
+                CSS was introduced in 1996 by the World Wide Web Consortium (W3C).
+            </p>
+
+            <p>
+                Before CSS, all styling was written directly inside HTML.
+                This made websites difficult to manage.
+            </p>
+
+            <table>
+                <tr>
+                    <th>Version</th>
+                    <th>Year</th>
+                </tr>
+
+                <tr>
+                    <td>CSS1</td>
+                    <td>1996</td>
+                </tr>
+
+                <tr>
+                    <td>CSS2</td>
+                    <td>1998</td>
+                </tr>
+
+                <tr>
+                    <td>CSS3</td>
+                    <td>1999+</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- TYPES OF CSS -->
+
+        <section id="types">
+            <h2>3. Types of CSS</h2>
+
+            <article>
+                <h3>Inline CSS</h3>
+                <p>
+                    Inline CSS is applied directly within an HTML element.
+                </p>
+            </article>
+
+            <article>
+                <h3>Internal CSS</h3>
+                <p>
+                    Internal CSS is written inside the style tag.
+                </p>
+            </article>
+
+            <article>
+                <h3>External CSS</h3>
+                <p>
+                    External CSS is stored in a separate file.
+                </p>
+            </article>
+        </section>
+
+        <!-- CSS SYNTAX -->
+
+        <section id="syntax">
+            <h2>4. CSS Syntax</h2>
+
+            <p>
+                CSS follows a simple syntax consisting of selectors and declarations.
+            </p>
+
+            <div class="code-box">
+                <pre>
+selector {
+    property: value;
+}
+                </pre>
+            </div>
+
+            <p>
+                Example:
+            </p>
+
+            <div class="code-box">
+                <pre>
+h1 {
+    color: blue;
+}
+                </pre>
+            </div>
+        </section>
+
+        <!-- SELECTORS -->
+
+        <section id="selectors">
+            <h2>5. CSS Selectors</h2>
+
+            <h3>Element Selector</h3>
+            <p>Selects all elements of a given type.</p>
+
+            <h3>Class Selector</h3>
+            <p>Selects elements with a specific class.</p>
+
+            <h3>ID Selector</h3>
+            <p>Selects a unique element using an ID.</p>
+
+            <h3>Universal Selector</h3>
+            <p>Selects all elements on a page.</p>
+
+            <table>
+                <tr>
+                    <th>Selector</th>
+                    <th>Example</th>
+                </tr>
+
+                <tr>
+                    <td>Element</td>
+                    <td>p</td>
+                </tr>
+
+                <tr>
+                    <td>Class</td>
+                    <td>.box</td>
+                </tr>
+
+                <tr>
+                    <td>ID</td>
+                    <td>#header</td>
+                </tr>
+
+                <tr>
+                    <td>Universal</td>
+                    <td>*</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- COLORS -->
+
+        <section id="colors">
+            <h2>6. Colors in CSS</h2>
+
+            <p>CSS supports multiple color formats.</p>
+
+            <ul>
+                <li>Color Names</li>
+                <li>HEX Values</li>
+                <li>RGB Values</li>
+                <li>RGBA Values</li>
+                <li>HSL Values</li>
+            </ul>
+
+            <div class="color-container">
+                <div class="color-box red">Red</div>
+                <div class="color-box blue">Blue</div>
+                <div class="color-box green">Green</div>
+            </div>
+        </section>
+
+        <!-- BACKGROUND -->
+
+        <section id="background">
+            <h2>7. Background Properties</h2>
+
+            <p>
+                Background properties control colors,
+                images, positions, and repetition.
+            </p>
+
+            <ul>
+                <li>background-color</li>
+                <li>background-image</li>
+                <li>background-repeat</li>
+                <li>background-size</li>
+                <li>background-position</li>
+            </ul>
+        </section>
+
+        <!-- TEXT -->
+
+        <section id="text">
+            <h2>8. Text Properties</h2>
+
+            <p>
+                CSS text properties improve readability.
+            </p>
+
+            <ul>
+                <li>text-align</li>
+                <li>text-transform</li>
+                <li>text-decoration</li>
+                <li>letter-spacing</li>
+                <li>line-height</li>
+            </ul>
+        </section>
+
+        <!-- FONTS -->
+
+        <section id="fonts">
+            <h2>9. Font Properties</h2>
+
+            <p>
+                Fonts control the appearance of text.
+            </p>
+
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                </tr>
+
+                <tr>
+                    <td>font-family</td>
+                    <td>Selects font type</td>
+                </tr>
+
+                <tr>
+                    <td>font-size</td>
+                    <td>Changes size</td>
+                </tr>
+
+                <tr>
+                    <td>font-weight</td>
+                    <td>Controls boldness</td>
+                </tr>
+
+                <tr>
+                    <td>font-style</td>
+                    <td>Italic style</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- BOX MODEL -->
+
+        <section id="boxmodel">
+            <h2>10. CSS Box Model</h2>
+
+            <p>
+                Every HTML element is treated as a box.
+            </p>
+
+            <div class="box-model">
+                Margin
+                <div class="border">
+                    Border
+                    <div class="padding">
+                        Padding
+                        <div class="content">
+                            Content
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Components</h3>
+
+            <ul>
+                <li>Content</li>
+                <li>Padding</li>
+                <li>Border</li>
+                <li>Margin</li>
+            </ul>
+        </section>
+
+        <!-- MARGIN -->
+
+<section id="margin">
+    <h2>11. Margin</h2>
+
+    <p>
+        Margin is the space outside an element's border.
+        It creates distance between elements and improves layout.
+    </p>
+
+    <div class="margin-demo">
+        Margin Example Box
+    </div>
+</section>
+
+<!-- PADDING -->
+
+<section id="padding-topic">
+    <h2>12. Padding</h2>
+
+    <p>
+        Padding is the space between the content and border.
+        It helps improve readability and spacing.
+    </p>
+
+    <div class="padding-demo">
+        Padding Example Box
+    </div>
+</section>
+
+<!-- BORDER -->
+
+<section id="border-topic">
+    <h2>13. Border</h2>
+
+    <p>
+        Borders surround elements and help highlight content.
+        Borders can have different colors, styles, and widths.
+    </p>
+
+    <div class="border-demo">
+        Border Example Box
+    </div>
+</section>
+
+<!-- WIDTH AND HEIGHT -->
+
+<section id="size">
+    <h2>14. Width and Height</h2>
+
+    <p>
+        Width controls horizontal size and height controls vertical size.
+        These properties define the dimensions of an element.
+    </p>
+
+    <div class="size-demo">
+        Width & Height Example
+    </div>
+</section>
+
+<!-- DISPLAY PROPERTY -->
+
+<section id="display">
+    <h2>15. Display Property</h2>
+
+    <p>
+        The display property controls how elements appear on a webpage.
+    </p>
+
+    <ul>
+        <li>Block</li>
+        <li>Inline</li>
+        <li>Inline-Block</li>
+        <li>Flex</li>
+        <li>Grid</li>
+    </ul>
+
+    <div class="display-demo">
+        Display Property Example
+    </div>
+</section>
+
+        <!-- FLEXBOX -->
+
+        <section id="flexbox">
+            <h2>16. Flexbox</h2>
+
+            <p>
+                Flexbox helps create one-dimensional layouts.
+            </p>
+
+            <div class="flex-container">
+                <div class="flex-item">Box 1</div>
+                <div class="flex-item">Box 2</div>
+                <div class="flex-item">Box 3</div>
+            </div>
+
+            <h3>Advantages</h3>
+
+            <ul>
+                <li>Easy alignment</li>
+                <li>Responsive layouts</li>
+                <li>Flexible sizing</li>
+            </ul>
+        </section>
+
+        <!-- GRID -->
+
+        <section id="grid">
+            <h2>17. CSS Grid</h2>
+
+            <p>
+                CSS Grid creates two-dimensional layouts.
+            </p>
+
+            <div class="grid-container">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+
+            <p>
+                Grid is useful for complex webpage structures.
+            </p>
+        </section>
+
+        <!-- POSITION -->
+
+        <section>
+            <h2>18. Position Property</h2>
+
+            <ul>
+                <li>Static</li>
+                <li>Relative</li>
+                <li>Absolute</li>
+                <li>Fixed</li>
+                <li>Sticky</li>
+            </ul>
+        </section>
+
+        <!-- PSEUDO CLASSES -->
+
+        <section>
+            <h2>19. Pseudo Classes</h2>
+
+            <p>:hover</p>
+            <p>:focus</p>
+            <p>:first-child</p>
+            <p>:last-child</p>
+        </section>
+
+        <!-- PSEUDO ELEMENTS -->
+
+        <section>
+            <h2>20. Pseudo Elements</h2>
+
+            <ul>
+                <li>::before</li>
+                <li>::after</li>
+                <li>::first-letter</li>
+                <li>::first-line</li>
+            </ul>
+        </section>
+
+        <!-- TRANSITIONS -->
+
+        <section>
+            <h2>21. CSS Transitions</h2>
+
+            <p>
+                Transitions provide smooth changes between states.
+            </p>
+        </section>
+
+        <!-- ANIMATIONS -->
+
+        <section>
+            <h2>22. CSS Animations</h2>
+
+            <p>
+                Animations create movement effects on elements.
+            </p>
+        </section>
+
+        <!-- RESPONSIVE -->
+
+        <section id="responsive">
+            <h2>23. Responsive Design</h2>
+
+            <p>
+                Responsive design ensures websites work on all devices.
+            </p>
+
+            <ul>
+                <li>Mobile</li>
+                <li>Tablet</li>
+                <li>Laptop</li>
+                <li>Desktop</li>
+            </ul>
+        </section>
+
+        <!-- MEDIA QUERIES -->
+
+        <section>
+            <h2>24. Media Queries</h2>
+
+            <p>
+                Media queries allow layouts to change based on screen size.
+            </p>
+        </section>
+
+        <section id="zindex">
+    <h2>25. Z-Index</h2>
+
+    <p>
+        The z-index property controls the stacking order of elements.
+        An element with a higher z-index appears in front of elements with lower values.
+    </p>
+
+    <div class="z-container">
+        <div class="box-one">Box 1</div>
+        <div class="box-two">Box 2</div>
+    </div>
+</section>
+
+        <!-- BEST PRACTICES -->
+
+        <section>
+            <h2>26. CSS Best Practices</h2>
+
+            <ul>
+                <li>Use External CSS</li>
+                <li>Keep code organized</li>
+                <li>Use meaningful class names</li>
+                <li>Reduce repetition</li>
+                <li>Comment important sections</li>
+            </ul>
+        </section>
+
+        <!-- ADVANTAGES -->
+
+        <section>
+            <h2>27. Advantages of CSS</h2>
+
+            <ul>
+                <li>Improves design</li>
+                <li>Easy maintenance</li>
+                <li>Faster loading</li>
+                <li>Responsive layouts</li>
+                <li>Better user experience</li>
+            </ul>
+        </section>
+
+        <!-- CONCLUSION -->
+
+        <section>
+            <h2>28. Conclusion</h2>
+
+            <p>
+                CSS is a powerful styling language used to create attractive,
+                responsive, and professional websites.
+            </p>
+
+            <p>
+                Mastering selectors, layouts, Flexbox, Grid,
+                animations, and responsive design will help you become
+                a skilled web developer.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Complete CSS Concepts Educational Website</p>
+        <p>Created for Learning and Practice</p>
+    </footer>
+
+</body>
+</html>

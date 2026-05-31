@@ -1,0 +1,614 @@
+/* ===================================
+   GLOBAL STYLES
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:#f4f6f9;
+    color:#333;
+    line-height:1.8;
+}
+
+/* ===================================
+   HEADER
+=================================== */
+
+header{
+    background:linear-gradient(135deg,#0f4c81,#1e88e5);
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+header h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+header p{
+    font-size:18px;
+}
+
+/* ===================================
+   NAVIGATION
+=================================== */
+
+nav{
+    background:#222;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    list-style:none;
+}
+
+nav ul li{
+    margin:0;
+}
+
+nav ul li a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:15px 18px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    background:#1e88e5;
+}
+
+/* ===================================
+   MAIN CONTENT
+=================================== */
+
+main{
+    width:90%;
+    max-width:1200px;
+    margin:30px auto;
+}
+
+/* ===================================
+   SECTIONS
+=================================== */
+
+section{
+    background:white;
+    margin-bottom:30px;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+section h2{
+    color:#0f4c81;
+    margin-bottom:20px;
+    border-bottom:3px solid #1e88e5;
+    padding-bottom:10px;
+}
+
+section h3{
+    margin-top:20px;
+    margin-bottom:10px;
+    color:#444;
+}
+
+section p{
+    margin-bottom:15px;
+    text-align:justify;
+}
+
+/* ===================================
+   LISTS
+=================================== */
+
+ul{
+    margin-left:25px;
+    margin-top:10px;
+}
+
+ul li{
+    margin-bottom:10px;
+}
+
+/* ===================================
+   TABLES
+=================================== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+table th{
+    background:#1e88e5;
+    color:white;
+    padding:12px;
+    border:1px solid #ddd;
+}
+
+table td{
+    padding:12px;
+    border:1px solid #ddd;
+}
+
+table tr:nth-child(even){
+    background:#f7f7f7;
+}
+
+/* ===================================
+   CODE BOX
+=================================== */
+
+.code-box{
+    background:#272822;
+    color:#ffffff;
+    padding:20px;
+    border-radius:8px;
+    margin:20px 0;
+    overflow-x:auto;
+}
+
+.code-box pre{
+    white-space:pre-wrap;
+    font-family:Consolas, monospace;
+}
+
+/* ===================================
+   COLOR DEMO BOXES
+=================================== */
+
+.color-container{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.color-box{
+    width:120px;
+    height:120px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-weight:bold;
+    border-radius:10px;
+}
+
+.red{
+    background:red;
+}
+
+.blue{
+    background:blue;
+}
+
+.green{
+    background:green;
+}
+
+/* ===================================
+   BOX MODEL DEMO
+=================================== */
+
+.box-model{
+    background:#f7c948;
+    padding:25px;
+    text-align:center;
+    margin-top:20px;
+    font-weight:bold;
+}
+
+.border{
+    background:#f28c28;
+    padding:25px;
+}
+
+.padding{
+    background:#38b000;
+    padding:25px;
+    color:white;
+}
+
+.content{
+    background:white;
+    color:black;
+    padding:25px;
+}
+
+
+/* ===================================
+   FLEXBOX
+=================================== */
+
+.flex-container{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.flex-item{
+    flex:1;
+    min-width:180px;
+    background:#1e88e5;
+    color:white;
+    text-align:center;
+    padding:30px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.flex-item:hover{
+    transform:translateY(-8px);
+}
+
+/* ===================================
+   GRID
+=================================== */
+
+.grid-container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    margin-top:20px;
+}
+
+.grid-container div{
+    background:#0f4c81;
+    color:white;
+    padding:40px;
+    text-align:center;
+    border-radius:8px;
+}
+
+/* ===================================
+   ARTICLE
+=================================== */
+
+article{
+    background:#fafafa;
+    border-left:5px solid #1e88e5;
+    padding:15px;
+    margin-top:15px;
+    border-radius:5px;
+}
+
+/* ===================================
+   BUTTON STYLE
+=================================== */
+
+.btn{
+    display:inline-block;
+    background:#1e88e5;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:5px;
+    margin-top:15px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#0f4c81;
+}
+
+/* ===================================
+   IMAGE PLACEHOLDER
+=================================== */
+
+.image-box{
+    height:250px;
+    background:#d9d9d9;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:20px;
+}
+
+/* ===================================
+   HOVER CARD EFFECT
+=================================== */
+
+.card{
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.02);
+}
+
+/* ===================================
+   FOOTER
+=================================== */
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:30px;
+}
+
+footer p{
+    margin:5px 0;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+=================================== */
+
+@media(max-width:992px){
+
+    header h1{
+        font-size:34px;
+    }
+
+    nav ul{
+        flex-direction:column;
+    }
+
+    nav ul li a{
+        text-align:center;
+    }
+
+    .grid-container{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:768px){
+
+    main{
+        width:95%;
+    }
+
+    section{
+        padding:20px;
+    }
+
+    .flex-container{
+        flex-direction:column;
+    }
+
+    .color-container{
+        justify-content:center;
+    }
+
+    header h1{
+        font-size:28px;
+    }
+}
+
+@media(max-width:480px){
+
+    header{
+        padding:30px 15px;
+    }
+
+    header h1{
+        font-size:24px;
+    }
+
+    section h2{
+        font-size:22px;
+    }
+
+    table{
+        font-size:14px;
+    }
+}
+
+/* ===================================
+   ANIMATION EXAMPLE
+=================================== */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+section{
+    animation:fadeIn 0.8s ease;
+}
+
+/* ===================================
+   MARGIN EXAMPLE
+=================================== */
+
+.margin-demo{
+    background:#ffe5b4;
+    margin:30px;
+    padding:20px;
+    text-align:center;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* ===================================
+   PADDING EXAMPLE
+=================================== */
+
+.padding-demo{
+    background:#d4edda;
+    padding:40px;
+    text-align:center;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* ===================================
+   BORDER EXAMPLE
+=================================== */
+
+.border-demo{
+    border:5px solid #1e88e5;
+    padding:20px;
+    text-align:center;
+    border-radius:8px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+/* ===================================
+   WIDTH & HEIGHT EXAMPLE
+=================================== */
+
+.size-demo{
+    width:250px;
+    height:120px;
+    background:#f8d7da;
+    text-align:center;
+    line-height:120px;
+    border-radius:8px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+/* ===================================
+   DISPLAY PROPERTY EXAMPLE
+=================================== */
+
+.display-demo{
+    background:#e2e3e5;
+    padding:20px;
+    border-radius:8px;
+    margin-top:15px;
+    text-align:center;
+    font-weight:bold;
+}
+
+/* ===================================
+   PSEUDO CLASS EXAMPLE
+=================================== */
+
+.pseudo-btn{
+    background:#1e88e5;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.pseudo-btn:hover{
+    background:#0f4c81;
+    transform:scale(1.05);
+}
+
+/* ===================================
+   PSEUDO ELEMENT EXAMPLE
+=================================== */
+
+.pseudo-text{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.pseudo-text::before{
+    content:"★ ";
+    color:gold;
+}
+
+.pseudo-text::after{
+    content:" ★";
+    color:gold;
+}
+
+/* ===================================
+   TRANSITION EXAMPLE
+=================================== */
+
+.transition-box{
+    width:150px;
+    height:150px;
+    background:#1e88e5;
+    border-radius:10px;
+    margin-top:15px;
+    transition:all 0.5s ease;
+}
+
+.transition-box:hover{
+    background:#0f4c81;
+    transform:rotate(10deg) scale(1.1);
+}
+
+/* ===================================
+   ANIMATION EXAMPLE
+=================================== */
+
+.animation-box{
+    width:120px;
+    height:120px;
+    background:#38b000;
+    border-radius:10px;
+    margin-top:15px;
+    animation:moveBox 3s infinite alternate;
+}
+
+@keyframes moveBox{
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(200px);
+    }
+}
+.z-container{
+    position:relative;
+    height:180px;
+    margin-top:20px;
+}
+
+.box-one{
+    width:150px;
+    height:150px;
+    background:red;
+    color:white;
+    position:absolute;
+    top:20px;
+    left:20px;
+    z-index:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.box-two{
+    width:150px;
+    height:150px;
+    background:blue;
+    color:white;
+    position:absolute;
+    top:60px;
+    left:80px;
+    z-index:2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
