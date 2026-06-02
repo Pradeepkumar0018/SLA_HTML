@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Tasks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- TASK 3: NAVBAR -->
+    <nav class="bg-red-600 text-white px-6 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">RCB Fan Zone</h1>
+
+        <ul class="flex gap-6">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <button class="bg-white text-red-600 px-4 py-2 rounded-lg font-semibold">
+            Login
+        </button>
+    </nav>
+
+    <!-- TASK 1: CARD -->
+    <section class="p-10">
+        <h2 class="text-3xl font-bold text-center mb-8">Task 1 - RCB Card</h2>
+
+        <div class="bg-white shadow-lg rounded-lg p-5 w-80 mx-auto">
+            <img src="../Assets/imgs/rcb.png"
+                class="w-full h-48 object-cover rounded-lg">
+
+            <h2 class="text-2xl font-bold mt-4 text-red-600">
+                Royal Challengers Bengaluru
+            </h2>
+
+            <p class="text-gray-600 mt-2">
+                RCB is one of the most popular IPL teams with a huge fan base.
+                The team won its first IPL trophy in 2025 and wins the second trophy in 2026
+            </p>
+
+            <button class="bg-red-600 text-white px-4 py-2 rounded-lg mt-4">
+                View Team
+            </button>
+        </div>
+    </section>
+
+    <!-- TASK 2: GRID LAYOUT -->
+    <section class="p-10">
+        <h2 class="text-3xl font-bold text-center mb-8">
+            Task 2 - Responsive Grid
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+            <div class="bg-red-500 text-white p-8 rounded-lg text-center">
+                Box 1
+            </div>
+
+            <div class="bg-blue-500 text-white p-8 rounded-lg text-center">
+                Box 2
+            </div>
+
+            <div class="bg-green-500 text-white p-8 rounded-lg text-center">
+                Box 3
+            </div>
+
+            <div class="bg-purple-500 text-white p-8 rounded-lg text-center">
+                Box 4
+            </div>
+
+            <div class="bg-yellow-500 text-black p-8 rounded-lg text-center">
+                Box 5
+            </div>
+
+            <div class="bg-pink-500 text-white p-8 rounded-lg text-center">
+                Box 6
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TASK 4: PROFILE CARD -->
+    <section class="p-10">
+        <h2 class="text-3xl font-bold text-center mb-8">
+            Task 4 - Profile Card
+        </h2>
+
+        <div class="bg-white shadow-lg p-6 rounded-lg flex flex-col items-center w-72 mx-auto">
+
+            <img src="../Assets/imgs/VK.png"
+                class="w-28 h-28 rounded-full object-cover">
+
+            <h2 class="text-2xl font-bold mt-4">
+                Virat Kohli
+            </h2>
+
+            <p class="text-gray-600">
+                RCB Legend
+            </p>
+
+            <button class="mt-4 bg-red-600 text-white px-5 py-2 rounded-lg">
+                Follow
+            </button>
+
+        </div>
+    </section>
+
+    <!-- TASK 5: IMAGE GALLERY -->
+    <section class="p-10">
+        <h2 class="text-3xl font-bold text-center mb-8">
+            Task 5 - RCB 2026 Gallery
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+            <div class="overflow-hidden rounded-lg shadow-lg">
+                <img src="../Assets/imgs/rcb.png"
+                    class="w-full h-72 object-cover hover:scale-110 transition duration-300">
+            </div>
+
+            <div class="overflow-hidden rounded-lg shadow-lg">
+                <img src="../Assets/imgs/rajat.png"
+                    class="w-full h-72 object-cover hover:scale-110 transition duration-300">
+            </div>
+
+            <div class="overflow-hidden rounded-lg shadow-lg">
+                <img src="../Assets/imgs/VK.png"
+                    class="w-full h-72 object-cover hover:scale-110 transition duration-300">
+            </div>
+
+            <div class="overflow-hidden rounded-lg shadow-lg">
+                <img src="../Assets/imgs/bhuvi.png"
+                    class="w-full h-72 object-cover hover:scale-110 transition duration-300">
+            </div>
+
+            <div class="overflow-hidden rounded-lg shadow-lg">
+                <img src="../Assets/imgs/team.png"
+                    class="w-full h-72 object-cover hover:scale-110 transition duration-300">
+            </div>
+
+            <div class="overflow-hidden rounded-lg shadow-lg">
+                <img src="../Assets/imgs/cele.png"
+                    class="w-full h-72 object-cover hover:scale-110 transition duration-300">
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
