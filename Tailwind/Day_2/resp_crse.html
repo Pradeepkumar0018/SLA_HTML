@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Responsive Course Cards</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+<!-- NAVBAR -->
+<nav class="bg-blue-600 text-white p-4 sticky top-0">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Tech Academy</h1>
+
+        <ul class="flex gap-6">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section id="home" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-24">
+    <h1 class="text-5xl font-bold mb-4">
+        Learn Modern Technologies
+    </h1>
+
+    <p class="text-lg mb-6">
+        Build your future with industry-ready courses.
+    </p>
+
+    <button class="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-200">
+        Explore Courses
+    </button>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="max-w-7xl mx-auto py-16 px-6">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+
+        <img
+        src="../Assets/imgs/abt.png"
+        class="rounded-lg shadow-lg w-full">
+
+        <div>
+            <h2 class="text-4xl font-bold mb-4">About Us</h2>
+
+            <p class="text-gray-700 text-lg">
+                We provide high-quality training in Web Development,
+                Python, Java, Data Science, AI, and Cloud Computing.
+                Our mission is to help students become industry-ready
+                professionals.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="bg-gray-200 py-16">
+    <h2 class="text-4xl font-bold text-center mb-10">
+        Our Services
+    </h2>
+
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 px-6">
+
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold mb-3">Web Development</h3>
+            <p>Create responsive and modern websites.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold mb-3">Mobile Apps</h3>
+            <p>Build Android and iOS applications.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold mb-3">UI/UX Design</h3>
+            <p>Design attractive user experiences.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- COURSE CARDS -->
+<section id="courses" class="max-w-7xl mx-auto py-16 px-6">
+
+    <h2 class="text-4xl font-bold text-center mb-10">
+        Popular Courses
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+        <!-- CARD 1 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full">
+            <img src="../Assets/imgs/web_dev.png"
+                 class="w-full h-48 object-cover">
+
+            <div class="p-4 flex flex-col flex-grow">
+                <h3 class="font-bold text-2xl mb-2">Web Development</h3>
+                <p class="text-gray-600">Trainer: Krishna</p>
+                <p class="text-green-600 font-bold text-xl mt-3">₹2999</p>
+
+                <button class="w-full mt-auto bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600">
+                    Enroll
+                </button>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full">
+            <img src="../Assets/imgs/java.png"
+                 class="w-full h-48 object-cover">
+
+            <div class="p-4 flex flex-col flex-grow">
+                <h3 class="font-bold text-2xl mb-2">JavaScript</h3>
+                <p class="text-gray-600">Trainer: Dravid</p>
+                <p class="text-green-600 font-bold text-xl mt-3">₹3999</p>
+
+                <button class="w-full mt-auto bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600">
+                    Enroll
+                </button>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full">
+            <img src="../Assets/imgs/pyth.png"
+                 class="w-full h-48 object-cover">
+
+            <div class="p-4 flex flex-col flex-grow">
+                <h3 class="font-bold text-2xl mb-2">Python</h3>
+                <p class="text-gray-600">Trainer: Aakash</p>
+                <p class="text-green-600 font-bold text-xl mt-3">₹4999</p>
+
+                <button class="w-full mt-auto bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600">
+                    Enroll
+                </button>
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full">
+            <img src="../Assets/imgs/react.png"
+                 class="w-full h-48 object-cover">
+
+            <div class="p-4 flex flex-col flex-grow">
+                <h3 class="font-bold text-2xl mb-2">React JS</h3>
+                <p class="text-gray-600">Trainer: Dubey</p>
+                <p class="text-green-600 font-bold text-xl mt-3">₹5999</p>
+
+                <button class="w-full mt-auto bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600">
+                    Enroll
+                </button>
+            </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full">
+            <img src="../Assets/imgs/node.png"
+                 class="w-full h-48 object-cover">
+
+            <div class="p-4 flex flex-col flex-grow">
+                <h3 class="font-bold text-2xl mb-2">Node JS</h3>
+                <p class="text-gray-600">Trainer: Suriya</p>
+                <p class="text-green-600 font-bold text-xl mt-3">₹5499</p>
+
+                <button class="w-full mt-auto bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600">
+                    Enroll
+                </button>
+            </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full">
+            <img src="../Assets/imgs/ds.png"
+                 class="w-full h-48 object-cover">
+
+            <div class="p-4 flex flex-col flex-grow">
+                <h3 class="font-bold text-2xl mb-2">Data Science</h3>
+                <p class="text-gray-600">Trainer: Ruthuraj</p>
+                <p class="text-green-600 font-bold text-xl mt-3">₹6999</p>
+
+                <button class="w-full mt-auto bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600">
+                    Enroll
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+</section>
+
+<!-- ADMIN DASHBOARD -->
+<section id="dashboard" class="py-16 bg-gray-200">
+
+    <h2 class="text-4xl font-bold text-center mb-10">
+        Admin Dashboard
+    </h2>
+
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 px-6">
+
+        <!-- Sidebar -->
+        <div class="bg-gray-900 text-white p-6 rounded-lg lg:w-64">
+            <h3 class="text-2xl font-bold mb-6">Menu</h3>
+
+            <ul class="space-y-4">
+                <li>Dashboard</li>
+                <li>Users</li>
+                <li>Courses</li>
+                <li>Reports</li>
+                <li>Settings</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1">
+
+            <!-- Stats Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+
+                <div class="bg-white p-6 rounded shadow">
+                    <h3 class="text-3xl font-bold">1500</h3>
+                    <p>Users</p>
+                </div>
+
+                <div class="bg-white p-6 rounded shadow">
+                    <h3 class="text-3xl font-bold">100</h3>
+                    <p>Courses</p>
+                </div>
+
+                <div class="bg-white p-6 rounded shadow">
+                    <h3 class="text-3xl font-bold">500</h3>
+                    <p>Reports</p>
+                </div>
+
+                <div class="bg-white p-6 rounded shadow">
+                    <h3 class="text-3xl font-bold">₹2L</h3>
+                    <p>Revenue</p>
+                </div>
+
+            </div>
+
+            <!-- Users Table -->
+            <div class="bg-white p-6 rounded shadow overflow-x-auto">
+
+                <h3 class="text-2xl font-bold mb-4">
+                    Recent Users
+                </h3>
+
+                <table class="w-full border">
+                    <tr class="bg-gray-300">
+                        <th class="border p-3">Name</th>
+                        <th class="border p-3">Email</th>
+                        <th class="border p-3">Status</th>
+                    </tr>
+
+                    <tr>
+                        <td class="border p-3">Pradeep</td>
+                        <td class="border p-3">pradeep@gmail.com</td>
+                        <td class="border p-3">Active</td>
+                    </tr>
+
+                    <tr>
+                        <td class="border p-3">Rahul</td>
+                        <td class="border p-3">rahul@gmail.com</td>
+                        <td class="border p-3">Active</td>
+                    </tr>
+
+                    <tr>
+                        <td class="border p-3">Kumar</td>
+                        <td class="border p-3">kumar@gmail.com</td>
+                        <td class="border p-3">Inactive</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="max-w-4xl mx-auto py-16 px-6">
+
+    <h2 class="text-4xl font-bold text-center mb-10">
+        Contact Us
+    </h2>
+
+    <form class="bg-white p-8 rounded-lg shadow-lg">
+
+        <input
+        type="text"
+        placeholder="Your Name"
+        class="w-full border p-3 mb-4 rounded">
+
+        <input
+        type="email"
+        placeholder="Your Email"
+        class="w-full border p-3 mb-4 rounded">
+
+        <textarea
+        rows="5"
+        placeholder="Your Message"
+        class="w-full border p-3 mb-4 rounded"></textarea>
+
+        <button
+        class="bg-blue-600 text-white px-8 py-3 rounded">
+            Send Message
+        </button>
+
+    </form>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white text-center p-6">
+    <p>© 2026 Tech Academy. All Rights Reserved.</p>
+
+    <div class="flex justify-center gap-6 mt-3">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+    </div>
+</footer>
+
+</body>
+</html>
