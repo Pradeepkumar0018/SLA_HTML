@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Commerce Store</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md p-4">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+
+            <h1 class="text-3xl font-bold text-blue-600">
+                ShopEase
+            </h1>
+
+            <input
+                type="text"
+                placeholder="Search Products..."
+                class="border px-4 py-2 rounded-lg w-full md:w-96">
+
+            <div class="flex items-center gap-4">
+
+                <select class="border px-3 py-2 rounded-lg">
+                    <option>All Categories</option>
+                    <option>Electronics</option>
+                    <option>Fashion</option>
+                    <option>Footwear</option>
+                    <option>Accessories</option>
+                </select>
+
+                <button class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700">
+                     Cart
+                </button>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products -->
+    <section class="container mx-auto py-10 px-4">
+
+        <h2 class="text-3xl font-bold text-center mb-8">
+            Featured Products
+        </h2>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
+            <!-- Product 1 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+
+                <div class="overflow-hidden">
+                    <img
+                    src="../Assets/imgs/rnshoes.png"
+                    alt=""
+                    class="w-full h-64 object-cover hover:scale-110 transition duration-500">
+                </div>
+
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold">
+                        Running Shoes
+                    </h3>
+
+                    <p class="text-green-600 font-bold text-lg mt-2">
+                        $99
+                    </p>
+
+                    <p class="text-yellow-500 mt-2">
+                        ⭐⭐⭐⭐⭐
+                    </p>
+
+                    <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                        Add To Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+
+                <div class="overflow-hidden">
+                    <img
+                    src="../Assets/imgs/phone.png"
+                    alt=""
+                    class="w-full h-64 object-cover hover:scale-110 transition duration-500">
+                </div>
+
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold">
+                        Smartphone
+                    </h3>
+
+                    <p class="text-green-600 font-bold text-lg mt-2">
+                        $699
+                    </p>
+
+                    <p class="text-yellow-500 mt-2">
+                        ⭐⭐⭐⭐☆
+                    </p>
+
+                    <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                        Add To Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+
+                <div class="overflow-hidden">
+                    <img
+                    src="../Assets/imgs/smwatch.png"
+                    alt=""
+                    class="w-full h-64 object-cover hover:scale-110 transition duration-500">
+                </div>
+
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold">
+                        Smart Watch
+                    </h3>
+
+                    <p class="text-green-600 font-bold text-lg mt-2">
+                        $199
+                    </p>
+
+                    <p class="text-yellow-500 mt-2">
+                        ⭐⭐⭐⭐⭐
+                    </p>
+
+                    <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                        Add To Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+
+                <div class="overflow-hidden">
+                    <img
+                    src="../Assets/imgs/headph.png"
+                    alt=""
+                    class="w-full h-64 object-cover hover:scale-110 transition duration-500">
+                </div>
+
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold">
+                        Headphones
+                    </h3>
+
+                    <p class="text-green-600 font-bold text-lg mt-2">
+                        $149
+                    </p>
+
+                    <p class="text-yellow-500 mt-2">
+                        ⭐⭐⭐⭐☆
+                    </p>
+
+                    <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                        Add To Cart
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

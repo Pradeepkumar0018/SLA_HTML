@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Management UI</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+<!-- Navbar -->
+<nav class="bg-blue-600 text-white p-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Student Manager</h1>
+
+        <ul class="flex gap-6">
+            <li><a href="#" class="hover:text-yellow-300">Home</a></li>
+            <li><a href="#" class="hover:text-yellow-300">Students</a></li>
+            <li><a href="#" class="hover:text-yellow-300">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Search Bar -->
+<section class="container mx-auto px-4 mt-8">
+    <input
+        type="text"
+        placeholder="Search Student..."
+        class="w-full p-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-500">
+</section>
+
+<!-- Add Student Form -->
+<section class="container mx-auto px-4 mt-8">
+    <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Add Student</h2>
+
+        <form class="grid md:grid-cols-2 gap-4">
+            <input type="text" placeholder="Student Name"
+                class="border p-3 rounded">
+
+            <input type="text" placeholder="Course"
+                class="border p-3 rounded">
+
+            <input type="email" placeholder="Email"
+                class="border p-3 rounded">
+
+            <input type="tel" placeholder="Phone"
+                class="border p-3 rounded">
+
+            <button
+                class="bg-green-600 text-white p-3 rounded hover:bg-green-700 md:col-span-2">
+                Add Student
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- Student Cards -->
+<section class="container mx-auto px-4 py-10">
+
+    <h2 class="text-3xl font-bold text-center mb-8">
+        Student List
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Card 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+            <img
+            src="../Assets/imgs/Screenshot (46).png"
+            alt="Student"
+            class="w-full h-56 object-cover">
+
+            <div class="p-4">
+                <h3 class="text-xl font-bold">Naveen</h3>
+                <p class="text-gray-600">B.Tech CSE</p>
+                <p class="text-gray-600">Naveen@gmail.com</p>
+                <p class="text-gray-600">9876543210</p>
+
+                <div class="flex gap-3 mt-4">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                        Edit
+                    </button>
+
+                    <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+            <img
+            src="../Assets/imgs/rck.png"
+            alt="Student"
+            class="w-full h-56 object-cover">
+
+            <div class="p-4">
+                <h3 class="text-xl font-bold">Rock</h3>
+                <p class="text-gray-600">BCA</p>
+                <p class="text-gray-600">rock@gmail.com</p>
+                <p class="text-gray-600">9123456780</p>
+
+                <div class="flex gap-3 mt-4">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                        Edit
+                    </button>
+
+                    <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+            <img
+            src="../Assets/imgs/speed.png"
+            alt="Student"
+            class="w-full h-56 object-cover">
+
+            <div class="p-4">
+                <h3 class="text-xl font-bold">Speed</h3>
+                <p class="text-gray-600">MCA</p>
+                <p class="text-gray-600">speed@gmail.com</p>
+                <p class="text-gray-600">9012345678</p>
+
+                <div class="flex gap-3 mt-4">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                        Edit
+                    </button>
+
+                    <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+            <img
+            src="../Assets/imgs/gp.png"
+            alt="Student"
+            class="w-full h-56 object-cover">
+
+            <div class="p-4">
+                <h3 class="text-xl font-bold">GP Muthu</h3>
+                <p class="text-gray-600">MBA</p>
+                <p class="text-gray-600">muthu@gmail.com</p>
+                <p class="text-gray-600">9988776655</p>
+
+                <div class="flex gap-3 mt-4">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                        Edit
+                    </button>
+
+                    <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white text-center p-4 mt-10">
+    <p>© 2026 Student Management System | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

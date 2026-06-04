@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Main Layout -->
+    <div class="grid md:grid-cols-5 min-h-screen">
+
+        <!-- Sidebar -->
+        <aside class="bg-gray-900 text-white md:col-span-1 p-6">
+
+            <h1 class="text-3xl font-bold mb-8">Admin</h1>
+
+            <nav>
+                <ul class="space-y-4">
+                    <li>
+                        <a href="#" class="block p-3 rounded hover:bg-gray-700">
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="block p-3 rounded hover:bg-gray-700">
+                            Users
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="block p-3 rounded hover:bg-gray-700">
+                            Courses
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="block p-3 rounded hover:bg-gray-700">
+                            Reports
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="block p-3 rounded hover:bg-gray-700">
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="md:col-span-4 p-6">
+
+            <h2 class="text-3xl font-bold mb-6">
+                Dashboard Overview
+            </h2>
+
+            <!-- Statistics Cards -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-gray-500">Total Users</h3>
+                    <p class="text-3xl font-bold mt-2">1,250</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-gray-500">Courses</h3>
+                    <p class="text-3xl font-bold mt-2">85</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-gray-500">Reports</h3>
+                    <p class="text-3xl font-bold mt-2">320</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-gray-500">Revenue</h3>
+                    <p class="text-3xl font-bold mt-2">₹100000</p>
+                </div>
+
+            </div>
+
+            <!-- Recent Users Table -->
+            <div class="bg-white rounded-lg shadow p-6 mb-8">
+
+                <h3 class="text-xl font-semibold mb-4">
+                    Recent Users
+                </h3>
+
+                <div class="overflow-x-auto">
+
+                    <table class="w-full border-collapse">
+
+                        <thead>
+                            <tr class="bg-gray-200">
+                                <th class="p-3 text-left">ID</th>
+                                <th class="p-3 text-left">Name</th>
+                                <th class="p-3 text-left">Email</th>
+                                <th class="p-3 text-left">Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr class="border-b">
+                                <td class="p-3">111</td>
+                                <td class="p-3">Naveen</td>
+                                <td class="p-3">Naveen@gmail.com</td>
+                                <td class="p-3 text-green-600 font-semibold">
+                                    Active
+                                </td>
+                            </tr>
+
+                            <tr class="border-b">
+                                <td class="p-3">112</td>
+                                <td class="p-3">Sai</td>
+                                <td class="p-3">sai@gmail.com</td>
+                                <td class="p-3 text-green-600 font-semibold">
+                                    Active
+                                </td>
+                            </tr>
+
+                            <tr class="border-b">
+                                <td class="p-3">113</td>
+                                <td class="p-3">Arul</td>
+                                <td class="p-3">Arul@gmail.com</td>
+                                <td class="p-3 text-red-600 font-semibold">
+                                    Inactive
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="p-3">114</td>
+                                <td class="p-3">Bala</td>
+                                <td class="p-3">Balaa@gmail.com</td>
+                                <td class="p-3 text-green-600 font-semibold">
+                                    Active
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+            <!-- Charts Placeholder -->
+            <div class="grid md:grid-cols-2 gap-6">
+
+                <div class="bg-white rounded-lg shadow p-6 h-64 flex items-center justify-center">
+                    <h3 class="text-gray-500 text-xl">
+                        Chart Placeholder 1
+                    </h3>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-6 h-64 flex items-center justify-center">
+                    <h3 class="text-gray-500 text-xl">
+                        Chart Placeholder 2
+                    </h3>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

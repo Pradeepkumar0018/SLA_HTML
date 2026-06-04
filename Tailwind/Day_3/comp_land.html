@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep-X Company</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-900 text-white sticky top-0 z-50">
+        <div class="container mx-auto px-6">
+
+            <div class="flex justify-between items-center py-4">
+
+                <div class="text-2xl font-bold">
+                    Deep-X
+                </div>
+
+                <button id="menu-btn" class="md:hidden text-3xl">
+                    ☰
+                </button>
+
+                <ul class="hidden md:flex space-x-8 items-center">
+
+                    <li><a href="#home" class="hover:text-blue-400">Home</a></li>
+
+                    <li><a href="#about" class="hover:text-blue-400">About</a></li>
+
+                    <li><a href="#services" class="hover:text-blue-400">Services</a></li>
+
+                    <!-- Dropdown -->
+                    <li class="relative group">
+
+                        <button class="hover:text-blue-400">
+                            More 
+                        </button>
+
+                        <ul class="absolute hidden group-hover:block bg-white text-black mt-2 w-40 rounded shadow-lg">
+
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-200">
+                                    Careers
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-200">
+                                    Projects
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-200">
+                                    Gallery
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Mobile Menu -->
+
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+
+                <a href="#home" class="block py-2">Home</a>
+
+                <a href="#about" class="block py-2">About</a>
+
+                <a href="#services" class="block py-2">Services</a>
+
+                <a href="#contact" class="block py-2">Contact</a>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Banner -->
+
+    <section id="home"
+    class="h-screen bg-cover bg-center flex items-center justify-center text-center text-white"
+    style="background-image:url('../Assets/imgs/bck.png');">
+
+        <div class="bg-black bg-opacity-60 p-10 rounded-lg">
+
+            <h1 class="text-5xl md:text-7xl font-bold mb-5">
+                Welcome To Deep-X
+            </h1>
+
+            <p class="text-lg mb-6">
+                Innovative Solutions For Modern Businesses
+            </p>
+
+            <a href="#services"
+            class="bg-blue-600 px-6 py-3 rounded hover:bg-blue-700">
+                Explore Services
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- About -->
+
+    <section id="about" class="py-20 bg-white">
+
+        <div class="container mx-auto px-6">
+
+            <div class="flex flex-col md:flex-row items-center gap-10">
+
+                <div class="md:w-1/2">
+
+                    <img
+                    src="../Assets/imgs/abt.png"
+                    class="rounded-xl shadow-lg w-full">
+
+                </div>
+
+                <div class="md:w-1/2">
+
+                    <h2 class="text-4xl font-bold mb-5">
+                        About Us
+                    </h2>
+
+                    <p class="text-gray-700 mb-4">
+                        TechNova is a leading technology company delivering
+                        innovative web solutions, cloud services, software
+                        development and digital transformation strategies.
+                    </p>
+
+                    <p class="text-gray-700 mb-6">
+                        We help startups and enterprises achieve success
+                        through cutting-edge technology and creative ideas.
+                    </p>
+
+                    <button
+                    class="bg-gray-900 text-white px-6 py-3 rounded">
+                        Learn More
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Services -->
+
+    <section id="services" class="py-20 bg-gray-100">
+
+        <div class="container mx-auto px-6">
+
+            <h2 class="text-4xl font-bold text-center mb-12">
+                Our Services
+            </h2>
+
+            <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-8">
+
+                <div class="bg-white p-8 rounded-xl shadow hover:scale-105 transition">
+                    <h3 class="text-2xl font-bold mb-3">Web Development</h3>
+                    <p>Responsive and modern websites.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow hover:scale-105 transition">
+                    <h3 class="text-2xl font-bold mb-3">UI/UX Design</h3>
+                    <p>Creative and user-friendly designs.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow hover:scale-105 transition">
+                    <h3 class="text-2xl font-bold mb-3">Mobile Apps</h3>
+                    <p>Android and iOS app development.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow hover:scale-105 transition">
+                    <h3 class="text-2xl font-bold mb-3">Cloud Services</h3>
+                    <p>Secure cloud infrastructure.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow hover:scale-105 transition">
+                    <h3 class="text-2xl font-bold mb-3">Marketing</h3>
+                    <p>Grow your business online.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow hover:scale-105 transition">
+                    <h3 class="text-2xl font-bold mb-3">Cyber Security</h3>
+                    <p>Protect data and systems.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+
+    <section id="contact" class="py-20 bg-white">
+
+        <div class="container mx-auto px-6 max-w-3xl">
+
+            <h2 class="text-4xl font-bold text-center mb-8">
+                Contact Us
+            </h2>
+
+            <form class="flex flex-col gap-4">
+
+                <input
+                type="text"
+                placeholder="Your Name"
+                class="border p-4 rounded">
+
+                <input
+                type="email"
+                placeholder="Your Email"
+                class="border p-4 rounded">
+
+                <textarea
+                rows="5"
+                placeholder="Your Message"
+                class="border p-4 rounded"></textarea>
+
+                <button
+                class="bg-blue-600 text-white py-3 rounded hover:bg-blue-700">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="bg-gray-900 text-white text-center py-6">
+
+        <p>
+            © 2026 Deep-X Company. All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <script>
+        const btn = document.getElementById("menu-btn");
+        const menu = document.getElementById("mobile-menu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+
+</body>
+</html>
