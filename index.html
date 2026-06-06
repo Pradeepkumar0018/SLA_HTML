@@ -1,119 +1,248 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="scroll-smooth">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Tasks</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frontend Development Task Portfolio</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+::-webkit-scrollbar{
+width:8px;
+}
+::-webkit-scrollbar-thumb{
+background:#6366f1;
+border-radius:20px;
+}
+.assignment-card{
+transition:all .3s ease;
+}
+.assignment-card:hover{
+transform:translateY(-8px);
+}
+</style>
 </head>
-<body>
 
+<body class="bg-slate-950 text-white">
 
-	<div>
-		<h1>Task List</h1>
-		<h3>HTML</h3>
-		<a href="HTML/DAY_4/TN_ELECTION_RESULT2026_2.html">Day 4 Assinment1</a><br>
-        <a href="HTML/DAY_4/TN_ELECTION_RESULT2026.html">Day 4 Assinment2</a>
-	</div>
-	<br>
-	<div>
-        <a href="HTML/DAY_5/Cricketinfo.html">Day 5 Assignment1</a>
-	</div>
-	<br>
-	<div>
-	    <a href="HTML/DAY_6/FormElements.html">Day 6 Assignment1</a>
-	</div>
-	<br>
-	<div>
-		<a href="HTML/DAY_7/ProductDetails&Tables.html">Day 7 Assignment1</a><br>
-	    <a href="HTML/DAY_7/CollegeAdmissionForm.html">Day 7 Assignment2</a><br>
-		<a href="HTML/DAY_7/EmployeeDetails.html">Day 7 Assignment3</a><br>
-		<a href="HTML/DAY_7/Login&Signup_Form.html">DAY 7 Assignment4</a><br>
-		<a href="HTML/DAY_7/ResumeBuilderForm.html">DAY 7 Assignment5</a><br>
-		<a href="HTML/DAY_7/StudentRegForm.html">DAY 7 Assignment6</a><br>
-	</div>
-	<br>
-	<div>
-	    <a href="HTML/DAY_8/HTML5_RcbMultimediaPage.html">DAY 8 Assignment1</a>
-	</div>
-	<br>
-	<div>
-		<a href="HTML/DAY_9/Html_Fullprocess.html">DAY 9 Assignment1</a>
-	</div>
-	<br>
+<!-- Navbar -->
+<nav class="sticky top-0 z-50 backdrop-blur-lg bg-slate-950/80 border-b border-slate-800">
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<h1 class="font-bold text-xl bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text text-transparent">
+Task Portfolio
+</h1>
 
-	<div>
-		<h3>CSS</h3>
-		<a href="CSS/assets/Text/Task_1.txt">DAY 1 Assignment1</a><br>
-		<a href="CSS/Day_1/inline.html">DAY 1 Assignment2</a><br>
-		<a href="CSS/Day_1/internal.html">DAY 1 Assignment3</a><br>
-		<a href="CSS/Day_1/external.html">DAY 1 Assignment4</a><br>
-	</div>
-	<br>
-	    <a href="CSS/Day_2/external.html">DAY 2 Assignment1</a>
-	<div>
-	<br>
-		<a href="CSS/Day_4/box_mode.html">DAY 3 Assignment1</a><br>
-		<a href="CSS/Day_4/box_with_box.html">DAY 3 Assignment2</a><br>
-		<a href="CSS/Day_4/box_3.html">DAY 3 Assignment3</a><br>
-	</div>
-	<br>
-	<div>
-		<a href="CSS/Day_5/flexbox.html">DAY 4 Assignment1</a>
-	</div>
-	<br>
-	<div>
-		<a href="CSS/Day_6/decathalon_mod.html">DAY 6 Assignment1</a>
-	</div>
-	<br>
-	<div>
-		<a href="CSS/Day_7/figma_mod.html">DAY 7 Assignment1</a>
-	</div>
-	<br>
-	<div>
-		<a href="CSS/Day_8/card.html">DAY 8 Assignment1</a><br>
-		<a href="CSS/Day_8/flex_img.html">DAY 8 Assignment2</a>
-	</div>
-	<br>
-	<div>
-		<a href="CSS/Day_9/card_des.html">DAY 9 Assignment1</a>
-	</div>
-	<br>
-	<div>
-		<a href="CSS/Day_10/css.html">DAY 10 Assignment1</a>
-	</div>
-	<br>
-	<div>
-		<a href="CSS/Assignment/cafe.html">DAY 11 Assignment 1</a>
-	</div>
-	<br>
-	<div>
-		<h3>Bootstrap</h3>
-		<a href="Bootstrap/Day_1/boot.html">DAY 1 Assignment 1</a>
-	</div>
-	<br>
-	<div>
-		<a href="Bootstrap/Day_2/crs_listing_pg.html">DAY 2 Assignment 1 BootxTail</a>
-	</div>
-	<br>
-	<div>
-		<h3>Tailwind</h3>
-		<a href="Tailwind/Day_1/cmpl_task.html">DAY 1 Assignment 1</a>
-	</div>
-	<br>
-	<div>
-		<a href="Tailwind/Day_2/resp_crse.html">DAY 2 Assignment 1</a>
-	</div>
-	<br>
-	<div>
-		<a href="Tailwind/Day_3/comp_land.html">DAY 3 Assignment 1</a><br>
-		<a href="Tailwind/Day_3/dashboard.html">DAY 3 Assignment 2</a><br>
-		<a href="Tailwind/Day_3/E-comm.html">DAY 3 Assignment 3</a><br>
-		<a href="Tailwind/Day_3/st_man_ui.html">DAY 3 Assignment 4</a><br>
-	</div>
+<div class="hidden md:flex gap-6 text-sm">
+<a href="#html" class="hover:text-cyan-400">HTML</a>
+<a href="#css" class="hover:text-cyan-400">CSS</a>
+<a href="#bootstrap" class="hover:text-cyan-400">Bootstrap</a>
+<a href="#tailwind" class="hover:text-cyan-400">Tailwind</a>
+</div>
+</div>
+</nav>
 
-        
+<!-- Hero -->
+<section class="relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-indigo-900 via-slate-950 to-cyan-950"></div>
 
-    
+<div class="relative max-w-7xl mx-auto px-6 py-24 text-center">
+<h1 class="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
+Frontend Development Task Portfolio
+</h1>
+
+<p class="text-slate-300 text-lg max-w-3xl mx-auto">
+A complete collection of HTML, CSS, Bootstrap and Tailwind assignments organized in a modern responsive dashboard.
+</p>
+
+<div class="mt-10 max-w-xl mx-auto">
+<input
+type="text"
+id="searchInput"
+placeholder="Search assignments..."
+class="w-full px-5 py-4 rounded-xl bg-slate-900 border border-slate-700 focus:outline-none focus:border-cyan-400 text-white"
+/>
+</div>
+</div>
+</section>
+
+<!-- Stats -->
+<section class="max-w-7xl mx-auto px-6 py-10">
+<div class="grid md:grid-cols-4 gap-6">
+
+<div class="bg-gradient-to-br from-cyan-500 to-blue-600 p-6 rounded-2xl shadow-2xl">
+<h3 class="text-lg font-semibold">HTML Tasks</h3>
+<p class="text-4xl font-bold mt-3">17</p>
+</div>
+
+<div class="bg-gradient-to-br from-purple-500 to-pink-600 p-6 rounded-2xl shadow-2xl">
+<h3 class="text-lg font-semibold">CSS Tasks</h3>
+<p class="text-4xl font-bold mt-3">14</p>
+</div>
+
+<div class="bg-gradient-to-br from-amber-500 to-orange-600 p-6 rounded-2xl shadow-2xl">
+<h3 class="text-lg font-semibold">Bootstrap Tasks</h3>
+<p class="text-4xl font-bold mt-3">2</p>
+</div>
+
+<div class="bg-gradient-to-br from-emerald-500 to-green-700 p-6 rounded-2xl shadow-2xl">
+<h3 class="text-lg font-semibold">Tailwind Tasks</h3>
+<p class="text-4xl font-bold mt-3">6</p>
+</div>
+
+</div>
+</section>
+
+<!-- HTML -->
+<section id="html" class="max-w-7xl mx-auto px-6 py-10">
+<h2 class="text-4xl font-bold mb-8 text-cyan-400">HTML Assignments</h2>
+
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+<a href="HTML/DAY_1/Story.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 1 Assignment 1</a>
+<a href="HTML/DAY_1/Story_Structure.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 1 Assignment 2</a>
+<a href="HTML/DAY_1/Tags_types.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 1 Assignment 3</a>
+
+<a href="HTML/DAY_2/Block&Inline_StrucStory.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 2 Assignment 1</a>
+<a href="HTML/DAY_2/Block_level_StructureStory.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 2 Assignment 2</a>
+<a href="HTML/DAY_2/Inline_StructureStory.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 2 Assignment 3</a>
+
+<a href="HTML/DAY_3/TN_ELECTION_RESULT2026.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 3 Assignment 1</a>
+
+<a href="HTML/DAY_4/TN_ELECTION_RESULT2026_2.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 4 Assignment 1</a>
+
+<a href="HTML/DAY_4/TN_ELECTION_RESULT2026.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 4 Assignment 2</a>
+
+<a href="HTML/DAY_5/Cricketinfo.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 5 Assignment 1</a>
+
+<a href="HTML/DAY_6/FormElements.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 6 Assignment 1</a>
+
+<a href="HTML/DAY_7/ProductDetails&Tables.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 7 Assignment 1</a>
+
+<a href="HTML/DAY_7/CollegeAdmissionForm.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 7 Assignment 2</a>
+
+<a href="HTML/DAY_7/EmployeeDetails.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 7 Assignment 3</a>
+
+<a href="HTML/DAY_7/Login&Signup_Form.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 7 Assignment 4</a>
+
+<a href="HTML/DAY_7/ResumeBuilderForm.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 7 Assignment 5</a>
+
+<a href="HTML/DAY_7/StudentRegForm.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 7 Assignment 6</a>
+
+<a href="HTML/DAY_8/HTML5_RcbMultimediaPage.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 8 Assignment 1</a>
+
+<a href="HTML/DAY_9/Html_Fullprocess.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 9 Assignment 1</a>
+
+</div>
+</section>
+
+<!-- CSS -->
+<section id="css" class="max-w-7xl mx-auto px-6 py-10">
+<h2 class="text-4xl font-bold mb-8 text-purple-400">CSS Assignments</h2>
+
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+<a href="CSS/assets/Text/Task_1.txt" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 1 Assignment 1</a>
+
+<a href="CSS/Day_1/inline.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 1 Assignment 2</a>
+
+<a href="CSS/Day_1/internal.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 1 Assignment 3</a>
+
+<a href="CSS/Day_1/external.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 1 Assignment 4</a>
+
+<a href="CSS/Day_2/external.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 2 Assignment 1</a>
+
+<a href="CSS/Day_4/box_mode.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 3 Assignment 1</a>
+
+<a href="CSS/Day_4/box_with_box.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 3 Assignment 2</a>
+
+<a href="CSS/Day_4/box_3.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 3 Assignment 3</a>
+
+<a href="CSS/Day_5/flexbox.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 4 Assignment 1</a>
+
+<a href="CSS/Day_6/decathalon_mod.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 6 Assignment 1</a>
+
+<a href="CSS/Day_7/figma_mod.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 7 Assignment 1</a>
+
+<a href="CSS/Day_8/card.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 8 Assignment 1</a>
+
+<a href="CSS/Day_8/flex_img.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 8 Assignment 2</a>
+
+<a href="CSS/Day_9/card_des.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 9 Assignment 1</a>
+
+<a href="CSS/Day_10/css.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 10 Assignment 1</a>
+
+<a href="CSS/Assignment/cafe.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 11 Assignment 1</a>
+
+</div>
+</section>
+
+<!-- Bootstrap -->
+<section id="bootstrap" class="max-w-7xl mx-auto px-6 py-10">
+<h2 class="text-4xl font-bold mb-8 text-amber-400">Bootstrap Assignments</h2>
+
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+<a href="Bootstrap/Day_1/boot.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 1 Assignment 1</a>
+
+<a href="Bootstrap/Day_2/crs_listing_pg.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 2 Assignment 1 BootxTail</a>
+
+</div>
+</section>
+
+<!-- Tailwind -->
+<section id="tailwind" class="max-w-7xl mx-auto px-6 py-10">
+<h2 class="text-4xl font-bold mb-8 text-emerald-400">Tailwind Assignments</h2>
+
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+<a href="Tailwind/Day_1/cmpl_task.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 1 Assignment 1</a>
+
+<a href="Tailwind/Day_2/resp_crse.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 2 Assignment 1</a>
+
+<a href="Tailwind/Day_3/comp_land.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 3 Assignment 1</a>
+
+<a href="Tailwind/Day_3/dashboard.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 3 Assignment 2</a>
+
+<a href="Tailwind/Day_3/E-comm.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 3 Assignment 3</a>
+
+<a href="Tailwind/Day_3/st_man_ui.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 3 Assignment 4</a>
+
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-20 border-t border-slate-800">
+<div class="max-w-7xl mx-auto px-6 py-10 text-center text-slate-400">
+<p class="text-lg font-semibold text-white">
+Frontend Development Task Portfolio
+</p>
+<p class="mt-2">
+Developed by Pradeep Kumar
+</p>
+<p class="mt-2 text-sm">
+HTML • CSS • Bootstrap • Tailwind CSS
+</p>
+</div>
+</footer>
+
+<script>
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("keyup", function () {
+let filter = this.value.toLowerCase();
+
+document.querySelectorAll(".assignment-card").forEach(card => {
+let text = card.textContent.toLowerCase();
+
+if(text.includes(filter)){
+card.style.display = "block";
+}else{
+card.style.display = "none";
+}
+});
+});
+</script>
 
 </body>
 </html>
