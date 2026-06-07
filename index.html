@@ -4,244 +4,559 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Frontend Development Task Portfolio</title>
-
 <script src="https://cdn.tailwindcss.com"></script>
-
 <style>
-::-webkit-scrollbar{
-width:8px;
-}
-::-webkit-scrollbar-thumb{
-background:#6366f1;
-border-radius:20px;
-}
-.assignment-card{
-transition:all .3s ease;
-}
-.assignment-card:hover{
-transform:translateY(-8px);
-}
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+  * { font-family: 'DM Sans', sans-serif; }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #0f172a; }
+  ::-webkit-scrollbar-thumb { background: #6366f1; border-radius: 20px; }
+
+  .mono { font-family: 'Space Mono', monospace; }
+
+  .stat-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .stat-card:hover {
+    transform: translateY(-4px);
+  }
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.07);
+  }
+  .stat-card::after {
+    content: '';
+    position: absolute;
+    bottom: -40%;
+    right: 10%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+  }
+
+  table tr {
+    transition: background 0.2s ease;
+  }
+
+  .open-btn {
+    display: inline-block;
+    padding: 5px 18px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+  .open-btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.15);
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  .table-container {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #1e293b;
+  }
+
+  tbody tr:last-child td { border-bottom: none !important; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  section { animation: fadeUp 0.5s ease both; }
+
+  .hero-bg {
+    background: radial-gradient(ellipse at 20% 50%, rgba(99,102,241,0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(34,211,238,0.1) 0%, transparent 50%),
+                #020817;
+  }
 </style>
 </head>
 
 <body class="bg-slate-950 text-white">
 
 <!-- Navbar -->
-<nav class="sticky top-0 z-50 backdrop-blur-lg bg-slate-950/80 border-b border-slate-800">
-<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-<h1 class="font-bold text-xl bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text text-transparent">
-Task Portfolio
-</h1>
-
-<div class="hidden md:flex gap-6 text-sm">
-<a href="#html" class="hover:text-cyan-400">HTML</a>
-<a href="#css" class="hover:text-cyan-400">CSS</a>
-<a href="#bootstrap" class="hover:text-cyan-400">Bootstrap</a>
-<a href="#tailwind" class="hover:text-cyan-400">Tailwind</a>
-</div>
-</div>
+<nav class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/90 border-b border-slate-800/60">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="mono font-bold text-lg bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">
+      Task Portfolio
+    </h1>
+    <div class="hidden md:flex gap-8 text-sm font-medium">
+      <a href="#html" class="text-slate-400 hover:text-cyan-400 transition">HTML</a>
+      <a href="#css" class="text-slate-400 hover:text-purple-400 transition">CSS</a>
+      <a href="#bootstrap" class="text-slate-400 hover:text-amber-400 transition">Bootstrap</a>
+      <a href="#tailwind" class="text-slate-400 hover:text-emerald-400 transition">Tailwind</a>
+      <a href="#javascript" class="text-slate-400 hover:text-yellow-400 transition">JavaScript</a>
+    </div>
+  </div>
 </nav>
 
 <!-- Hero -->
-<section class="relative overflow-hidden">
-<div class="absolute inset-0 bg-gradient-to-br from-indigo-900 via-slate-950 to-cyan-950"></div>
-
-<div class="relative max-w-7xl mx-auto px-6 py-24 text-center">
-<h1 class="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
-Frontend Development Task Portfolio
-</h1>
-
-<p class="text-slate-300 text-lg max-w-3xl mx-auto">
-A complete collection of HTML, CSS, Bootstrap and Tailwind assignments organized in a modern responsive dashboard.
-</p>
-
-<div class="mt-10 max-w-xl mx-auto">
-<input
-type="text"
-id="searchInput"
-placeholder="Search assignments..."
-class="w-full px-5 py-4 rounded-xl bg-slate-900 border border-slate-700 focus:outline-none focus:border-cyan-400 text-white"
-/>
-</div>
-</div>
+<section class="hero-bg relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 py-24 text-center">
+    <p class="mono text-cyan-400 text-sm tracking-widest mb-4 uppercase">Frontend Development</p>
+    <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+      Task <span class="bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">Portfolio</span>
+    </h1>
+    <p class="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
+      A complete collection of HTML, CSS, Bootstrap and Tailwind assignments organized in a modern responsive dashboard.
+    </p>
+    <div class="mt-10 max-w-md mx-auto relative">
+      <svg class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
+      </svg>
+      <input type="text" id="searchInput" placeholder="Search assignments..."
+        class="w-full pl-10 pr-5 py-3.5 rounded-xl bg-slate-900/80 border border-slate-700 focus:outline-none focus:border-cyan-400 text-white placeholder-slate-500 text-sm transition"/>
+    </div>
+  </div>
 </section>
 
 <!-- Stats -->
-<section class="max-w-7xl mx-auto px-6 py-10">
-<div class="grid md:grid-cols-4 gap-6">
-
-<div class="bg-gradient-to-br from-cyan-500 to-blue-600 p-6 rounded-2xl shadow-2xl">
-<h3 class="text-lg font-semibold">HTML Tasks</h3>
-<p class="text-4xl font-bold mt-3">17</p>
-</div>
-
-<div class="bg-gradient-to-br from-purple-500 to-pink-600 p-6 rounded-2xl shadow-2xl">
-<h3 class="text-lg font-semibold">CSS Tasks</h3>
-<p class="text-4xl font-bold mt-3">14</p>
-</div>
-
-<div class="bg-gradient-to-br from-amber-500 to-orange-600 p-6 rounded-2xl shadow-2xl">
-<h3 class="text-lg font-semibold">Bootstrap Tasks</h3>
-<p class="text-4xl font-bold mt-3">2</p>
-</div>
-
-<div class="bg-gradient-to-br from-emerald-500 to-green-700 p-6 rounded-2xl shadow-2xl">
-<h3 class="text-lg font-semibold">Tailwind Tasks</h3>
-<p class="text-4xl font-bold mt-3">6</p>
-</div>
-
-</div>
+<section class="max-w-7xl mx-auto px-6 py-12">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+    <div class="stat-card bg-gradient-to-br from-cyan-500 to-blue-600 p-6 rounded-2xl">
+      <p class="text-cyan-100 text-sm font-medium">HTML Tasks</p>
+      <p class="mono text-5xl font-bold mt-2">17</p>
+    </div>
+    <div class="stat-card bg-gradient-to-br from-purple-500 to-pink-600 p-6 rounded-2xl">
+      <p class="text-purple-100 text-sm font-medium">CSS Tasks</p>
+      <p class="mono text-5xl font-bold mt-2">16</p>
+    </div>
+    <div class="stat-card bg-gradient-to-br from-amber-500 to-orange-600 p-6 rounded-2xl">
+      <p class="text-amber-100 text-sm font-medium">Bootstrap Tasks</p>
+      <p class="mono text-5xl font-bold mt-2">2</p>
+    </div>
+    <div class="stat-card bg-gradient-to-br from-emerald-500 to-green-600 p-6 rounded-2xl">
+      <p class="text-emerald-100 text-sm font-medium">Tailwind Tasks</p>
+      <p class="mono text-5xl font-bold mt-2">6</p>
+    </div>
+    <div class="stat-card bg-gradient-to-br from-yellow-400 to-yellow-600 p-6 rounded-2xl">
+    <p class="text-yellow-100 text-sm font-medium">JavaScript Tasks</p>
+    <p class="mono text-5xl font-bold mt-2">1</p>
+    </div>
+  </div>
 </section>
 
 <!-- HTML -->
 <section id="html" class="max-w-7xl mx-auto px-6 py-10">
-<h2 class="text-4xl font-bold mb-8 text-cyan-400">HTML Assignments</h2>
-
-<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-<a href="HTML/DAY_1/Story.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 1 Assignment 1</a>
-<a href="HTML/DAY_1/Story_Structure.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 1 Assignment 2</a>
-<a href="HTML/DAY_1/Tags_types.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 1 Assignment 3</a>
-
-<a href="HTML/DAY_2/Block&Inline_StrucStory.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 2 Assignment 1</a>
-<a href="HTML/DAY_2/Block_level_StructureStory.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 2 Assignment 2</a>
-<a href="HTML/DAY_2/Inline_StructureStory.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 2 Assignment 3</a>
-
-<a href="HTML/DAY_3/TN_ELECTION_RESULT2026.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 3 Assignment 1</a>
-
-<a href="HTML/DAY_4/TN_ELECTION_RESULT2026_2.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 4 Assignment 1</a>
-
-<a href="HTML/DAY_4/TN_ELECTION_RESULT2026.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 4 Assignment 2</a>
-
-<a href="HTML/DAY_5/Cricketinfo.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 5 Assignment 1</a>
-
-<a href="HTML/DAY_6/FormElements.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 6 Assignment 1</a>
-
-<a href="HTML/DAY_7/ProductDetails&Tables.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 7 Assignment 1</a>
-
-<a href="HTML/DAY_7/CollegeAdmissionForm.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 7 Assignment 2</a>
-
-<a href="HTML/DAY_7/EmployeeDetails.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 7 Assignment 3</a>
-
-<a href="HTML/DAY_7/Login&Signup_Form.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 7 Assignment 4</a>
-
-<a href="HTML/DAY_7/ResumeBuilderForm.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 7 Assignment 5</a>
-
-<a href="HTML/DAY_7/StudentRegForm.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 7 Assignment 6</a>
-
-<a href="HTML/DAY_8/HTML5_RcbMultimediaPage.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 8 Assignment 1</a>
-
-<a href="HTML/DAY_9/Html_Fullprocess.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 9 Assignment 1</a>
-
-</div>
+  <h2 class="text-3xl font-bold mb-10 text-cyan-400">HTML Assignments</h2>
+  <div class="table-container">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-slate-800/80 text-slate-300 text-xs uppercase tracking-wider">
+          <th class="text-left px-6 py-4 font-600">Technology</th>
+          <th class="text-left px-6 py-4 font-600">Day</th>
+          <th class="text-left px-6 py-4 font-600">Assignment</th>
+          <th class="text-left px-6 py-4 font-600">Open</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-cyan-500/20 text-cyan-300">HTML</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 1</td>
+          <td class="px-6 py-4 text-white font-medium">Story</td>
+          <td class="px-6 py-4"><a href="HTML/DAY_1/Story.html" class="open-btn bg-cyan-600 hover:bg-cyan-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-cyan-500/20 text-cyan-300">HTML</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 1</td>
+          <td class="px-6 py-4 text-white font-medium">Story Structure</td>
+          <td class="px-6 py-4"><a href="HTML/DAY_1/Story_Structure.html" class="open-btn bg-cyan-600 hover:bg-cyan-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-cyan-500/20 text-cyan-300">HTML</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 1</td>
+          <td class="px-6 py-4 text-white font-medium">Tags Types</td>
+          <td class="px-6 py-4"><a href="HTML/DAY_1/Tags_types.html" class="open-btn bg-cyan-600 hover:bg-cyan-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-cyan-500/20 text-cyan-300">HTML</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 2</td>
+          <td class="px-6 py-4 text-white font-medium">Block & Inline Story</td>
+          <td class="px-6 py-4"><a href="HTML/DAY_2/Block&Inline_StrucStory.html" class="open-btn bg-cyan-600 hover:bg-cyan-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-cyan-500/20 text-cyan-300">HTML</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 2</td>
+          <td class="px-6 py-4 text-white font-medium">Block Level Story</td>
+          <td class="px-6 py-4"><a href="HTML/DAY_2/Block_level_StructureStory.html" class="open-btn bg-cyan-600 hover:bg-cyan-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-cyan-500/20 text-cyan-300">HTML</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 2</td>
+          <td class="px-6 py-4 text-white font-medium">Inline Story</td>
+          <td class="px-6 py-4"><a href="HTML/DAY_2/Inline_StructureStory.html" class="open-btn bg-cyan-600 hover:bg-cyan-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-cyan-500/20 text-cyan-300">HTML</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 3</td>
+          <td class="px-6 py-4 text-white font-medium">TN Election Result 2026</td>
+          <td class="px-6 py-4"><a href="HTML/DAY_3/TN_ELECTION_RESULT2026.html" class="open-btn bg-cyan-600 hover:bg-cyan-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-cyan-500/20 text-cyan-300">HTML</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 4</td>
+          <td class="px-6 py-4 text-white font-medium">TN Election Result 2026 v2</td>
+          <td class="px-6 py-4"><a href="HTML/DAY_4/TN_ELECTION_RESULT2026_2.html" class="open-btn bg-cyan-600 hover:bg-cyan-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-cyan-500/20 text-cyan-300">HTML</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 4</td>
+          <td class="px-6 py-4 text-white font-medium">TN Election Result 2026</td>
+          <td class="px-6 py-4"><a href="HTML/DAY_4/TN_ELECTION_RESULT2026.html" class="open-btn bg-cyan-600 hover:bg-cyan-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-cyan-500/20 text-cyan-300">HTML</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 5</td>
+          <td class="px-6 py-4 text-white font-medium">Cricket Info</td>
+          <td class="px-6 py-4"><a href="HTML/DAY_5/Cricketinfo.html" class="open-btn bg-cyan-600 hover:bg-cyan-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-cyan-500/20 text-cyan-300">HTML</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 6</td>
+          <td class="px-6 py-4 text-white font-medium">Form Elements</td>
+          <td class="px-6 py-4"><a href="HTML/DAY_6/FormElements.html" class="open-btn bg-cyan-600 hover:bg-cyan-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-cyan-500/20 text-cyan-300">HTML</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 7</td>
+          <td class="px-6 py-4 text-white font-medium">Product Details & Tables</td>
+          <td class="px-6 py-4"><a href="HTML/DAY_7/ProductDetails&Tables.html" class="open-btn bg-cyan-600 hover:bg-cyan-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-cyan-500/20 text-cyan-300">HTML</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 7</td>
+          <td class="px-6 py-4 text-white font-medium">College Admission Form</td>
+          <td class="px-6 py-4"><a href="HTML/DAY_7/CollegeAdmissionForm.html" class="open-btn bg-cyan-600 hover:bg-cyan-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-cyan-500/20 text-cyan-300">HTML</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 7</td>
+          <td class="px-6 py-4 text-white font-medium">Employee Details</td>
+          <td class="px-6 py-4"><a href="HTML/DAY_7/EmployeeDetails.html" class="open-btn bg-cyan-600 hover:bg-cyan-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-cyan-500/20 text-cyan-300">HTML</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 7</td>
+          <td class="px-6 py-4 text-white font-medium">Login & Signup Form</td>
+          <td class="px-6 py-4"><a href="HTML/DAY_7/Login&Signup_Form.html" class="open-btn bg-cyan-600 hover:bg-cyan-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-cyan-500/20 text-cyan-300">HTML</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 7</td>
+          <td class="px-6 py-4 text-white font-medium">Resume Builder Form</td>
+          <td class="px-6 py-4"><a href="HTML/DAY_7/ResumeBuilderForm.html" class="open-btn bg-cyan-600 hover:bg-cyan-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-cyan-500/20 text-cyan-300">HTML</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 7</td>
+          <td class="px-6 py-4 text-white font-medium">Student Registration Form</td>
+          <td class="px-6 py-4"><a href="HTML/DAY_7/StudentRegForm.html" class="open-btn bg-cyan-600 hover:bg-cyan-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-cyan-500/20 text-cyan-300">HTML</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 8</td>
+          <td class="px-6 py-4 text-white font-medium">HTML5 RCB Multimedia Page</td>
+          <td class="px-6 py-4"><a href="HTML/DAY_8/HTML5_RcbMultimediaPage.html" class="open-btn bg-cyan-600 hover:bg-cyan-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-cyan-500/20 text-cyan-300">HTML</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 9</td>
+          <td class="px-6 py-4 text-white font-medium">HTML Full Process</td>
+          <td class="px-6 py-4"><a href="HTML/DAY_9/Html_Fullprocess.html" class="open-btn bg-cyan-600 hover:bg-cyan-500 text-white">Open</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
 <!-- CSS -->
 <section id="css" class="max-w-7xl mx-auto px-6 py-10">
-<h2 class="text-4xl font-bold mb-8 text-purple-400">CSS Assignments</h2>
-
-<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-<a href="CSS/assets/Text/Task_1.txt" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 1 Assignment 1</a>
-
-<a href="CSS/Day_1/inline.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 1 Assignment 2</a>
-
-<a href="CSS/Day_1/internal.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 1 Assignment 3</a>
-
-<a href="CSS/Day_1/external.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 1 Assignment 4</a>
-
-<a href="CSS/Day_2/external.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 2 Assignment 1</a>
-
-<a href="CSS/Day_4/box_mode.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 3 Assignment 1</a>
-
-<a href="CSS/Day_4/box_with_box.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 3 Assignment 2</a>
-
-<a href="CSS/Day_4/box_3.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 3 Assignment 3</a>
-
-<a href="CSS/Day_5/flexbox.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 4 Assignment 1</a>
-
-<a href="CSS/Day_6/decathalon_mod.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 6 Assignment 1</a>
-
-<a href="CSS/Day_7/figma_mod.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 7 Assignment 1</a>
-
-<a href="CSS/Day_8/card.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 8 Assignment 1</a>
-
-<a href="CSS/Day_8/flex_img.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 8 Assignment 2</a>
-
-<a href="CSS/Day_9/card_des.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 9 Assignment 1</a>
-
-<a href="CSS/Day_10/css.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 10 Assignment 1</a>
-
-<a href="CSS/Assignment/cafe.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 11 Assignment 1</a>
-
-</div>
+  <h2 class="text-3xl font-bold mb-10 text-purple-400">CSS Assignments</h2>
+  <div class="table-container">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-slate-800/80 text-slate-300 text-xs uppercase tracking-wider">
+          <th class="text-left px-6 py-4">Technology</th>
+          <th class="text-left px-6 py-4">Day</th>
+          <th class="text-left px-6 py-4">Assignment</th>
+          <th class="text-left px-6 py-4">Open</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-purple-500/20 text-purple-300">CSS</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 1</td>
+          <td class="px-6 py-4 text-white font-medium">Task Notes</td>
+          <td class="px-6 py-4"><a href="CSS/assets/Text/Task_1.txt" class="open-btn bg-purple-600 hover:bg-purple-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-purple-500/20 text-purple-300">CSS</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 1</td>
+          <td class="px-6 py-4 text-white font-medium">Inline CSS</td>
+          <td class="px-6 py-4"><a href="CSS/Day_1/inline.html" class="open-btn bg-purple-600 hover:bg-purple-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-purple-500/20 text-purple-300">CSS</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 1</td>
+          <td class="px-6 py-4 text-white font-medium">Internal CSS</td>
+          <td class="px-6 py-4"><a href="CSS/Day_1/internal.html" class="open-btn bg-purple-600 hover:bg-purple-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-purple-500/20 text-purple-300">CSS</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 1</td>
+          <td class="px-6 py-4 text-white font-medium">External CSS</td>
+          <td class="px-6 py-4"><a href="CSS/Day_1/external.html" class="open-btn bg-purple-600 hover:bg-purple-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-purple-500/20 text-purple-300">CSS</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 2</td>
+          <td class="px-6 py-4 text-white font-medium">Selectors & Properties</td>
+          <td class="px-6 py-4"><a href="CSS/Day_2/external.html" class="open-btn bg-purple-600 hover:bg-purple-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-purple-500/20 text-purple-300">CSS</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 4</td>
+          <td class="px-6 py-4 text-white font-medium">Box Model</td>
+          <td class="px-6 py-4"><a href="CSS/Day_4/box_mode.html" class="open-btn bg-purple-600 hover:bg-purple-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-purple-500/20 text-purple-300">CSS</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 4</td>
+          <td class="px-6 py-4 text-white font-medium">Box within Box</td>
+          <td class="px-6 py-4"><a href="CSS/Day_4/box_with_box.html" class="open-btn bg-purple-600 hover:bg-purple-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-purple-500/20 text-purple-300">CSS</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 4</td>
+          <td class="px-6 py-4 text-white font-medium">Box 3</td>
+          <td class="px-6 py-4"><a href="CSS/Day_4/box_3.html" class="open-btn bg-purple-600 hover:bg-purple-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-purple-500/20 text-purple-300">CSS</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 5</td>
+          <td class="px-6 py-4 text-white font-medium">Flexbox</td>
+          <td class="px-6 py-4"><a href="CSS/Day_5/flexbox.html" class="open-btn bg-purple-600 hover:bg-purple-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-purple-500/20 text-purple-300">CSS</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 6</td>
+          <td class="px-6 py-4 text-white font-medium">Decathlon Mockup</td>
+          <td class="px-6 py-4"><a href="CSS/Day_6/decathalon_mod.html" class="open-btn bg-purple-600 hover:bg-purple-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-purple-500/20 text-purple-300">CSS</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 7</td>
+          <td class="px-6 py-4 text-white font-medium">Figma Mockup</td>
+          <td class="px-6 py-4"><a href="CSS/Day_7/figma_mod.html" class="open-btn bg-purple-600 hover:bg-purple-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-purple-500/20 text-purple-300">CSS</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 8</td>
+          <td class="px-6 py-4 text-white font-medium">Card Design</td>
+          <td class="px-6 py-4"><a href="CSS/Day_8/card.html" class="open-btn bg-purple-600 hover:bg-purple-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-purple-500/20 text-purple-300">CSS</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 8</td>
+          <td class="px-6 py-4 text-white font-medium">Flex Image Layout</td>
+          <td class="px-6 py-4"><a href="CSS/Day_8/flex_img.html" class="open-btn bg-purple-600 hover:bg-purple-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-purple-500/20 text-purple-300">CSS</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 9</td>
+          <td class="px-6 py-4 text-white font-medium">Card Design 2</td>
+          <td class="px-6 py-4"><a href="CSS/Day_9/card_des.html" class="open-btn bg-purple-600 hover:bg-purple-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-purple-500/20 text-purple-300">CSS</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 10</td>
+          <td class="px-6 py-4 text-white font-medium">CSS Practice</td>
+          <td class="px-6 py-4"><a href="CSS/Day_10/css.html" class="open-btn bg-purple-600 hover:bg-purple-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-purple-500/20 text-purple-300">CSS</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 11</td>
+          <td class="px-6 py-4 text-white font-medium">Cafe Website</td>
+          <td class="px-6 py-4"><a href="CSS/Assignment/cafe.html" class="open-btn bg-purple-600 hover:bg-purple-500 text-white">Open</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
 <!-- Bootstrap -->
 <section id="bootstrap" class="max-w-7xl mx-auto px-6 py-10">
-<h2 class="text-4xl font-bold mb-8 text-amber-400">Bootstrap Assignments</h2>
-
-<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-<a href="Bootstrap/Day_1/boot.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 1 Assignment 1</a>
-
-<a href="Bootstrap/Day_2/crs_listing_pg.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 2 Assignment 1 BootxTail</a>
-
-</div>
+  <h2 class="text-3xl font-bold mb-10 text-amber-400">Bootstrap Assignments</h2>
+  <div class="table-container">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-slate-800/80 text-slate-300 text-xs uppercase tracking-wider">
+          <th class="text-left px-6 py-4">Technology</th>
+          <th class="text-left px-6 py-4">Day</th>
+          <th class="text-left px-6 py-4">Assignment</th>
+          <th class="text-left px-6 py-4">Open</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-amber-500/20 text-amber-300">Bootstrap</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 1</td>
+          <td class="px-6 py-4 text-white font-medium">Bootstrap Task</td>
+          <td class="px-6 py-4"><a href="Bootstrap/Day_1/boot.html" class="open-btn bg-amber-600 hover:bg-amber-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-amber-500/20 text-amber-300">Bootstrap</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 2</td>
+          <td class="px-6 py-4 text-white font-medium">Course Listing Page</td>
+          <td class="px-6 py-4"><a href="Bootstrap/Day_2/crs_listing_pg.html" class="open-btn bg-amber-600 hover:bg-amber-500 text-white">Open</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
 <!-- Tailwind -->
 <section id="tailwind" class="max-w-7xl mx-auto px-6 py-10">
-<h2 class="text-4xl font-bold mb-8 text-emerald-400">Tailwind Assignments</h2>
+  <h2 class="text-3xl font-bold mb-10 text-emerald-400">Tailwind Assignments</h2>
+  <div class="table-container">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-slate-800/80 text-slate-300 text-xs uppercase tracking-wider">
+          <th class="text-left px-6 py-4">Technology</th>
+          <th class="text-left px-6 py-4">Day</th>
+          <th class="text-left px-6 py-4">Assignment</th>
+          <th class="text-left px-6 py-4">Open</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-emerald-500/20 text-emerald-300">Tailwind CSS</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 1</td>
+          <td class="px-6 py-4 text-white font-medium">Complete Task</td>
+          <td class="px-6 py-4"><a href="Tailwind/Day_1/cmpl_task.html" class="open-btn bg-emerald-600 hover:bg-emerald-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-emerald-500/20 text-emerald-300">Tailwind CSS</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 2</td>
+          <td class="px-6 py-4 text-white font-medium">Course Card</td>
+          <td class="px-6 py-4"><a href="Tailwind/Day_2/resp_crse.html" class="open-btn bg-emerald-600 hover:bg-emerald-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-emerald-500/20 text-emerald-300">Tailwind CSS</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 3</td>
+          <td class="px-6 py-4 text-white font-medium">Company Landing Page</td>
+          <td class="px-6 py-4"><a href="Tailwind/Day_3/comp_land.html" class="open-btn bg-emerald-600 hover:bg-emerald-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-emerald-500/20 text-emerald-300">Tailwind CSS</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 3</td>
+          <td class="px-6 py-4 text-white font-medium">Admin Dashboard</td>
+          <td class="px-6 py-4"><a href="Tailwind/Day_3/dashboard.html" class="open-btn bg-emerald-600 hover:bg-emerald-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-emerald-500/20 text-emerald-300">Tailwind CSS</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 3</td>
+          <td class="px-6 py-4 text-white font-medium">Ecommerce Website</td>
+          <td class="px-6 py-4"><a href="Tailwind/Day_3/E-comm.html" class="open-btn bg-emerald-600 hover:bg-emerald-500 text-white">Open</a></td>
+        </tr>
+        <tr class="searchable hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-emerald-500/20 text-emerald-300">Tailwind CSS</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 3</td>
+          <td class="px-6 py-4 text-white font-medium">Student Management UI</td>
+          <td class="px-6 py-4"><a href="Tailwind/Day_3/st_man_ui.html" class="open-btn bg-emerald-600 hover:bg-emerald-500 text-white">Open</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-<a href="Tailwind/Day_1/cmpl_task.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 1 Assignment 1</a>
-
-<a href="Tailwind/Day_2/resp_crse.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 2 Assignment 1</a>
-
-<a href="Tailwind/Day_3/comp_land.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 3 Assignment 1</a>
-
-<a href="Tailwind/Day_3/dashboard.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 3 Assignment 2</a>
-
-<a href="Tailwind/Day_3/E-comm.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 3 Assignment 3</a>
-
-<a href="Tailwind/Day_3/st_man_ui.html" class="assignment-card bg-slate-900 p-5 rounded-xl border border-slate-800">DAY 3 Assignment 4</a>
-
-</div>
+<!-- Java -->
+ <section id="javascript" class="max-w-7xl mx-auto px-6 py-10">
+  <h2 class="text-3xl font-bold mb-10 text-yellow-400">JavaScript Assignments</h2>
+  <div class="table-container">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-slate-800/80 text-slate-300 text-xs uppercase tracking-wider">
+          <th class="text-left px-6 py-4">Technology</th>
+          <th class="text-left px-6 py-4">Day</th>
+          <th class="text-left px-6 py-4">Assignment</th>
+          <th class="text-left px-6 py-4">Open</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-yellow-500/20 text-yellow-300">JavaScript</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 1</td>
+          <td class="px-6 py-4 text-white font-medium">Script</td>
+          <td class="px-6 py-4"><a href="Java/Day_1/Script.js" class="open-btn bg-yellow-600 hover:bg-yellow-500 text-white">Open</a></td>
+        </tr>
+         <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-yellow-500/20 text-yellow-300">JavaScript</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 1</td>
+          <td class="px-6 py-4 text-white font-medium">Variables</td>
+          <td class="px-6 py-4"><a href="Java/Day_1/variable.html" class="open-btn bg-yellow-600 hover:bg-yellow-500 text-white">Open</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
 <!-- Footer -->
-<footer class="mt-20 border-t border-slate-800">
-<div class="max-w-7xl mx-auto px-6 py-10 text-center text-slate-400">
-<p class="text-lg font-semibold text-white">
-Frontend Development Task Portfolio
-</p>
-<p class="mt-2">
-Developed by Pradeep Kumar
-</p>
-<p class="mt-2 text-sm">
-HTML • CSS • Bootstrap • Tailwind CSS
-</p>
-</div>
+<footer class="mt-20 border-t border-slate-800/60">
+  <div class="max-w-7xl mx-auto px-6 py-12 text-center">
+    <p class="mono text-lg font-bold bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">
+      Frontend Development Task Portfolio
+    </p>
+    <p class="mt-3 text-slate-400 text-sm">Developed by Pradeep Kumar</p>
+    <div class="mt-4 flex justify-center gap-4 text-xs">
+      <span class="badge bg-cyan-500/20 text-cyan-300">HTML</span>
+      <span class="badge bg-purple-500/20 text-purple-300">CSS</span>
+      <span class="badge bg-amber-500/20 text-amber-300">Bootstrap</span>
+      <span class="badge bg-emerald-500/20 text-emerald-300">Tailwind CSS</span>
+      <span class="badge bg-emerald-500/20 text-emerald-300">JavaScript</span>
+    </div>
+  </div>
 </footer>
 
 <script>
-const searchInput = document.getElementById("searchInput");
+  const searchInput = document.getElementById("searchInput");
 
-searchInput.addEventListener("keyup", function () {
-let filter = this.value.toLowerCase();
+  searchInput.addEventListener("input", function () {
+    const filter = this.value.toLowerCase().trim();
 
-document.querySelectorAll(".assignment-card").forEach(card => {
-let text = card.textContent.toLowerCase();
+    document.querySelectorAll("tr.searchable").forEach(row => {
+      const text = row.textContent.toLowerCase();
+      row.style.display = text.includes(filter) ? "" : "none";
+    });
 
-if(text.includes(filter)){
-card.style.display = "block";
-}else{
-card.style.display = "none";
-}
-});
-});
+    document.querySelectorAll("section[id]").forEach(section => {
+      const visibleRows = section.querySelectorAll("tr.searchable:not([style*='display: none'])");
+      section.style.display = visibleRows.length > 0 || filter === "" ? "" : "none";
+    });
+  });
 </script>
 
 </body>
