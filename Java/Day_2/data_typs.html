@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Types</title>
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 30px;
+    line-height: 1.8;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    font-size: 40px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.box {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    color: #4f46e5;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #7c3aed;
+    margin-bottom: 10px;
+}
+
+h4 {
+    color: #16a34a;
+    margin-top: 10px;
+}
+
+p {
+    color: #444;
+}
+
+ul {
+    margin-left: 25px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+pre {
+    background: #eef2ff;
+    border-left: 6px solid #4f46e5;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 10px;
+}
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Data Types in JavaScript</h1>
+
+    <div class="box">
+        <h2>What is Data Type?</h2>
+
+        <p>
+            A Data Type defines the type of value that a variable can store.
+            JavaScript uses different data types to store text, numbers,
+            true/false values, and more.
+        </p>
+    </div>
+
+    <div class="box">
+    <h2>Why Data Types are Important?</h2>
+
+    <p>
+        Data types help JavaScript understand what kind of value is stored
+        inside a variable. They improve code readability, reduce errors,
+        and allow developers to perform appropriate operations on data.
+    </p>
+
+    <ul>
+        <li>Improves code quality</li>
+        <li>Prevents unexpected errors</li>
+        <li>Makes debugging easier</li>
+        <li>Helps in data validation</li>
+        <li>Enhances program performance</li>
+    </ul>
+</div>
+
+
+    <div class="box">
+        <h2>Primitive Data Types</h2>
+
+        <p>
+            Primitive Data Types are basic data types in JavaScript.
+            They store a single value and are immutable.
+        </p>
+    </div>
+
+    
+
+    <div class="box">
+        <h2>Primitive Data Types List</h2>
+
+        <ul>
+            <li>String</li>
+            <li>Number</li>
+            <li>Boolean</li>
+            <li>Undefined</li>
+            <li>Null</li>
+            <li>Symbol</li>
+            <li>BigInt</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h3>1. String</h3>
+
+        <p>
+            A String is used to store text or characters.
+            Strings are written inside single quotes (' ') or double quotes (" ").
+        </p>
+
+        <h4>Example:</h4>
+
+        <pre>
+let studentName = "John";
+console.log(typeof studentName, studentName);
+
+// Output:
+// string John
+        </pre>
+    </div>
+
+    <div class="box">
+        <h3>2. Number</h3>
+
+        <p>
+            A Number is used to store numeric values such as integers and decimal numbers.
+        </p>
+
+        <h4>Example:</h4>
+
+        <pre>
+let age = 25;
+console.log(typeof age, age);
+
+// Output:
+// number 25
+        </pre>
+    </div>
+
+    <div class="box">
+        <h3>3. Boolean</h3>
+
+        <p>
+            A Boolean stores only two values: true or false.
+        </p>
+
+        <h4>Example:</h4>
+
+        <pre>
+let isStudent = true;
+console.log(typeof isStudent, isStudent);
+
+// Output:
+// boolean true
+        </pre>
+    </div>
+
+    <div class="box">
+        <h3>4. Undefined</h3>
+
+        <p>
+            A variable that is declared but not assigned a value has the Undefined data type.
+        </p>
+
+        <h4>Example:</h4>
+
+        <pre>
+let city;
+console.log(typeof city, city);
+
+// Output:
+// undefined undefined
+        </pre>
+    </div>
+
+    <div class="box">
+        <h3>5. Null</h3>
+
+        <p>
+            Null represents an intentional absence of value.
+        </p>
+
+        <h4>Example:</h4>
+
+        <pre>
+let data = null;
+console.log(typeof data, data);
+
+// Output:
+// object null
+        </pre>
+    </div>
+
+    <div class="box">
+        <h3>6. Symbol</h3>
+
+        <p>
+            A Symbol is used to create unique identifiers.
+            Every Symbol value is unique.
+        </p>
+
+        <h4>Example:</h4>
+
+        <pre>
+let id = Symbol("unique");
+console.log(typeof id, id);
+
+// Output:
+// symbol Symbol(unique)
+        </pre>
+    </div>
+
+    <div class="box">
+        <h3>7. BigInt</h3>
+
+        <p>
+            BigInt is used to store very large integers that are bigger than
+            the Number data type can safely handle.
+        </p>
+
+        <h4>Example:</h4>
+
+        <pre>
+let population = 12345678901234567890n;
+console.log(typeof population, population);
+
+// Output:
+// bigint 12345678901234567890n
+        </pre>
+    </div>
+
+    <div class="box">
+    <h2>Non-Primitive Data Types</h2>
+
+    <p>
+        Non-Primitive Data Types can store multiple values and complex data.
+        These are mutable and are stored by reference.
+    </p>
+
+    <ul>
+        <li>Object</li>
+        <li>Array</li>
+        <li>Function</li>
+    </ul>
+
+    <h4>Example:</h4>
+
+<pre>
+let student = {
+    name: "John",
+    age: 20
+};
+
+let colors = ["Red", "Blue", "Green"];
+
+function greet() {
+    console.log("Welcome");
+}
+</pre>
+</div>
+
+<div class="box">
+    <h2>Conclusion</h2>
+
+    <p>
+        JavaScript provides different data types to store various kinds of
+        information. Understanding data types is one of the most important
+        fundamentals of JavaScript programming and helps developers write
+        efficient and error-free applications.
+    </p>
+</div>
+
+</body>
+
+</html>
