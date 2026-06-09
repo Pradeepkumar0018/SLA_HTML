@@ -1,0 +1,77 @@
+<script>
+    // Student Report Generator
+
+    let studentName = "Pradeep";
+
+    let mark1 = 85;
+    let mark2 = 90;
+    let mark3 = 75;
+
+    console.log("Student Name:", studentName);
+
+    // Arithmetic Operators
+    let total = mark1 + mark2 + mark3;
+    console.log("Total Marks (+):", total);
+
+    let difference = mark1 - mark2;
+    console.log("Difference (-):", difference);
+
+    let multiplication = mark1 * mark2;
+    console.log("Multiplication (*):", multiplication);
+
+    let average = total / 3;
+    console.log("Average (/):", average);
+
+    let remainder = total % 2;
+    console.log("Remainder (%):", remainder);
+
+    let square = mark1 ** 2;
+    console.log("Square (**):", square);
+
+    // Assignment Operators
+    let score = 100;
+
+    score += 20;
+    console.log("After += :", score);
+
+    score -= 10;
+    console.log("After -= :", score);
+
+    score *= 2;
+    console.log("After *= :", score);
+
+    score /= 5;
+    console.log("After /= :", score);
+
+    // Comparison Operators
+    console.log("mark1 == mark2 :", mark1 == mark2);
+    console.log("mark1 === mark2 :", mark1 === mark2);
+    console.log("mark1 != mark2 :", mark1 != mark2);
+
+    console.log("mark1 > mark2 :", mark1 > mark2);
+    console.log("mark1 < mark2 :", mark1 < mark2);
+
+    console.log("mark1 >= mark2 :", mark1 >= mark2);
+    console.log("mark1 <= mark2 :", mark1 <= mark2);
+
+    // Logical Operators
+    let passMark = 35;
+
+    let passedAll =
+        mark1 >= passMark &&
+        mark2 >= passMark &&
+        mark3 >= passMark;
+
+    console.log("Passed All Subjects (&&):", passedAll);
+
+    let passedAny =
+        mark1 >= passMark ||
+        mark2 >= passMark ||
+        mark3 >= passMark;
+
+    console.log("Passed Any Subject (||):", passedAny);
+
+    let failed = !passedAll;
+    console.log("Failed (!):", failed);
+
+</script>
