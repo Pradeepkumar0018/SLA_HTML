@@ -1,0 +1,76 @@
+<script>
+
+    // Task 1 - Palindrome Check
+    let movie = "LEVEL";
+    let reverseMovie = "";
+
+    for (let i = movie.length - 1; i >= 0; i--) {
+        reverseMovie += movie[i];
+    }
+
+    if (movie === reverseMovie) {
+        console.log("Palindrome");
+    } else {
+        console.log("Not Palindrome");
+    }
+
+
+    // Task 2 - Reverse String
+    let hero1 = "VIJAY";
+    let reverseHero = "";
+
+    for (let i = hero1.length - 1; i >= 0; i--) {
+        reverseHero += hero1[i];
+    }
+
+    console.log(reverseHero);
+
+
+    // Task 3 - Fibonacci Series
+    let a = 0;
+    let b = 1;
+
+    console.log(a);
+    console.log(b);
+
+    for (let i = 3; i <= 10; i++) {
+        let c = a + b;
+        console.log(c);
+        a = b;
+        b = c;
+    }
+
+
+    // Task 4 - Count Vowels
+    let hero2 = "SURIYA";
+    let vowelCount = 0;
+
+    for (let i = 0; i < hero2.length; i++) {
+        if (
+            hero2[i] === "A" ||
+            hero2[i] === "E" ||
+            hero2[i] === "I" ||
+            hero2[i] === "O" ||
+            hero2[i] === "U"
+        ) {
+            vowelCount++;
+        }
+    }
+
+    console.log("Vowels Count :", vowelCount);
+
+
+    // Task 5 - Count Character Frequency
+    let hero3 = "VIJAY";
+    let findChar = "A";
+    let count = 0;
+
+    for (let i = 0; i < hero3.length; i++) {
+        if (hero3[i] === findChar) {
+            count++;
+        }
+    }
+
+    console.log(count);
+
+</script>

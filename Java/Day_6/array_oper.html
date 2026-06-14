@@ -1,0 +1,72 @@
+<script>
+
+    // Task 1 - First Element
+
+    let heroes1 = ["Vijay", "Ajith", "Suriya", "SK"];
+
+    console.log(heroes1[0]);
+
+    // Task 2 - Last Element
+
+    let heroes2 = ["Vijay", "Ajith", "Suriya", "SK"];
+
+    console.log(heroes2[heroes2.length - 1]);
+
+
+    // Task 3 - Middle Element
+
+    let heroes3 = ["Vijay", "Ajith", "Suriya", "SK", "Dhanush"];
+
+    let middleIndex = Math.floor(heroes3.length / 2);
+
+    console.log(heroes3[middleIndex]);
+
+
+    // Task 4 - Nth Element
+
+
+    let heroes4 = ["Vijay", "Ajith", "Suriya", "SK", "Dhanush"];
+
+    let n1 = 4;
+
+    console.log(heroes4[n1 - 1]);
+
+
+    // Task 5 - First Highest Number
+
+    let collections1 = [700, 500, 900, 400, 800];
+
+    let firstHighest = Math.max(...collections1);
+
+    console.log(firstHighest);
+
+
+    // Task 6 - Second Highest Number
+
+    let collections2 = [700, 500, 900, 400, 800];
+
+    let sorted1 = [...collections2].sort((a, b) => b - a);
+
+    console.log(sorted1[1]);
+
+
+    // Task 7 - Third Highest Number
+
+    let collections3 = [700, 500, 900, 400, 800];
+
+    let sorted2 = [...collections3].sort((a, b) => b - a);
+
+    console.log(sorted2[2]);
+
+
+    // Task 8 - Nth Highest Number
+
+    let collections4 = [700, 500, 900, 400, 800];
+
+    let n2 = 4;
+
+    let sorted3 = [...collections4].sort((a, b) => b - a);
+
+    console.log(sorted3[n2 - 1]);
+
+</script>

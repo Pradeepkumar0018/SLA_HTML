@@ -1,0 +1,96 @@
+<script>
+
+    // Task 1
+    let heroes1 = ["Vijay", "Ajith", "Suriya", "SK"];
+
+    for (let i = 0; i < heroes1.length; i++) {
+        console.log(heroes1[i]);
+    }
+
+    // Task 2
+    let collections1 = [200, 500, 800, 400, 600];
+    let highest = collections1[0];
+
+    for (let i = 1; i < collections1.length; i++) {
+        if (collections1[i] > highest) {
+            highest = collections1[i];
+        }
+    }
+
+    console.log("Highest Collection =", highest);
+
+    // Task 3
+    let collections2 = [200, 500, 800, 400, 600];
+    let lowest = collections2[0];
+
+    for (let i = 1; i < collections2.length; i++) {
+        if (collections2[i] < lowest) {
+            lowest = collections2[i];
+        }
+    }
+
+    console.log("Lowest Collection =", lowest);
+
+    // Task 4
+    let collections3 = [200, 500, 800, 400, 600];
+    let total1 = 0;
+
+    for (let i = 0; i < collections3.length; i++) {
+        total1 += collections3[i];
+    }
+
+    console.log("Total Collection =", total1);
+
+    // Task 5
+    let collections4 = [200, 500, 800, 400, 600];
+    let total2 = 0;
+
+    for (let i = 0; i < collections4.length; i++) {
+        total2 += collections4[i];
+    }
+
+    let average = total2 / collections4.length;
+
+    console.log("Average Collection =", average);
+
+    // Task 6
+    let heroes2 = ["Vijay", "Ajith", "Suriya", "SK"];
+
+    for (let i = heroes2.length - 1; i >= 0; i--) {
+        console.log(heroes2[i]);
+    }
+
+    // Task 7
+    let fruits1 = ["Apple", "Mango", "Orange", "Banana"];
+    let searchFruit = "Mango";
+
+    for (let i = 0; i < fruits1.length; i++) {
+        if (fruits1[i] === searchFruit) {
+            console.log("Fruit Found");
+            break;
+        }
+    }
+
+    // Task 8
+    let fruits2 = ["Apple", "Mango", "Orange", "Banana"];
+    let count = 0;
+
+    for (let fruit of fruits2) {
+        count++;
+    }
+
+    console.log("Total Fruits =", count);
+
+    // Task 9
+    let heroes3 = ["Vijay", "Ajith", "Sivakarthikeyan", "SK"];
+    let longest = heroes3[0];
+
+    for (let i = 1; i < heroes3.length; i++) {
+        if (heroes3[i].length > longest.length) {
+            longest = heroes3[i];
+        }
+    }
+
+    console.log("Longest Hero Name =", longest);
+
+</script>
