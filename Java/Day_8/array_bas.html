@@ -1,0 +1,104 @@
+<script>
+
+    //Task 1 Push & Pop
+    let movies = ["Goat","Leo","Master"];
+    
+    movies.push("Ghili");
+    movies.pop();
+
+    console.log("Final Movie Array:", movies);
+
+    //task 2 Shift & Unshift
+
+    let names = ["Ajith","Suriya","SK"];
+
+    names.unshift("Vijay");
+    names.shift();
+
+    console.log("Final Name Array:", names);
+
+    //Task 3 Fruits Management
+    let fruits = ["Apple","Mango","Orange"];
+
+    fruits.push("Banana","Grapes");
+    fruits.pop();
+    fruits.unshift("Pineapple");
+    fruits.shift();
+
+    console.log("Final Fruits Array:", fruits);
+
+    //Task 4 Student object
+    let student = {
+        name: "Sudhan",
+        course: "Mern",
+        city: "Chennai" 
+    };
+
+    console.log("Dot Notation");
+    console.log("Student Name:", student.name);
+    console.log("Course:", student.course);
+    console.log("City:", student.city);
+
+    console.log("Bracket Notation");
+    console.log("Student Name:", student["name"]);
+    console.log("Course:", student["course"]);
+    console.log("City:", student["city"]);
+
+    //Task 5 Mobile Store
+    let mobiles = [
+        {
+            brand:"Samsung",
+            price:20000
+        },
+
+        {
+            brand:"iPhone",
+            price:80000
+        },
+
+        {
+            brand:"OnePlus",
+            price:35000
+        }
+    ];
+
+    for (let i = 0; i < mobiles.length; i++) {
+        console.log(mobiles[i].brand + " - " + mobiles[i].price);
+    }
+
+    // Task 6 Movie Collection Report 
+    let collections = [
+        {
+            movie: "Goat",
+            collection: 800
+        },
+        {
+            movie: "Leo",
+            collection: 600
+        },
+        {
+            movie: "Master",
+            collection: 500
+        }
+    ];
+
+    let totalCollection = 0;
+    let highestCollection = collections[0].collection;
+    let highestMovie = collections[0].movie;
+
+    for (let i = 0; i < collections.length; i++) {
+        totalCollection += collections[i].collection;
+
+        if (collections[i].collection > highestCollection) {
+            highestCollection = collections[i].collection;
+            highestMovie = collection[i].movie;
+        }
+    }
+
+    console.log("Total Collection:", totalCollection);
+    console.log("Highest Collection:", highestCollection);
+    console.log("Movie Name with Highest Collection:", highestMovie);
+
+
+
+</script>
