@@ -1,0 +1,106 @@
+<script>
+
+    // Task 1 – push() Method
+    let courses1 = ["HTML", "CSS", "JavaScript"];
+
+    courses1.push("React");
+    courses1.push("Node.js");
+
+    console.log(courses1);
+
+
+    // Task 2 – pop() Method
+    let courses2 = ["HTML", "CSS", "JavaScript", "React"];
+
+    let removedCourse = courses2.pop();
+
+    console.log("Removed Element:", removedCourse);
+    console.log("Updated Array:", courses2);
+
+
+    // Task 3 – shift() Method
+    let fruits = ["Apple", "Mango", "Orange", "Banana"];
+
+    let removedFruit = fruits.shift();
+
+    console.log("Removed Fruit:", removedFruit);
+    console.log("Updated Array:", fruits);
+
+
+    // Task 4 – unshift() Method
+    let actors1 = ["Ajith", "Suriya", "SK"];
+
+    actors1.unshift("Vijay");
+    actors1.unshift("Dhanush");
+
+    console.log(actors1);
+
+
+    // Task 5 – splice() Method
+    let courses3 = ["HTML", "CSS", "Bootstrap", "React"];
+
+    courses3.splice(2, 1, "JavaScript");
+
+    console.log(courses3);
+
+
+    // Task 6 – slice() Method
+    let courses4 = ["HTML", "CSS", "JavaScript", "React", "Node"];
+
+    let newCourses = courses4.slice(2, 4);
+
+    console.log(newCourses);
+
+
+    // Task 7 – Object Looping
+    let student = {
+        name: "Sudhan",
+        course: "MERN",
+        city: "Chennai",
+        age: 25
+    };
+
+    for (let key in student) {
+        console.log(key + " : " + student[key]);
+    }
+
+
+    // Task 8 – Array of Objects Looping
+    let actors2 = [
+        {
+            name: "Vijay",
+            movie: "GOAT"
+        },
+        {
+            name: "Ajith",
+            movie: "Vidaamuyarchi"
+        },
+        {
+            name: "Suriya",
+            movie: "Kanguva"
+        }
+    ];
+
+    for (let actor of actors2) {
+        console.log(actor.name + " - " + actor.movie);
+    }
+
+
+    // Task 9 – join() Method
+    let actors3 = ["Vijay", "Ajith", "Suriya", "SK"];
+
+    let result = actors3.join(" | ");
+
+    console.log(result);
+
+
+    // Task 10 – includes() Method
+    let courses5 = ["HTML", "CSS", "JavaScript", "React"];
+
+    if (courses5.includes("React")) {
+        console.log("Course Found");
+    } else {
+        console.log("Course Not Found");
+    }
+
+</script>
