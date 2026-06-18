@@ -1,0 +1,127 @@
+<script>
+
+    //Task 1 Variable scope
+    let hero = "Vijay";
+    function showHero() {
+        console.log("Inside function:", hero);
+    }
+    showHero();
+
+    if (true) {
+        console.log("Inside if block:", hero);
+    }
+
+    for (let i = 0; i < 1; i++) {
+        console.log("Inside loop:", hero);
+    }
+
+    //Task 2 Function scope
+    const movie = () => {
+        let collection = 800;
+    };
+
+    movie();
+
+    try {
+        console.log(collection);
+    } catch (error) {
+        console.log(error.message);
+    }
+
+    
+
+    //Task 3 Var vs let Scope
+    if (true) {
+        var actor1 = "Ajith";
+        let actor2 = "Vijay";
+    }
+
+    console.log(actor1);
+
+    try {
+        console.log(actor2);
+    } catch (error) {
+        console.log(error.message);
+    }
+    
+
+    //Task 4 Named function
+    function showMovie() {
+        console.log("GOAT Movie Released");
+    }
+
+    showMovie();
+
+    //Task 5 Named Arrow function
+    const add = (a,b) => {
+        console.log(a + b);
+    };
+    add(10, 20);
+
+    //Task 6 Callback Arrow function
+    function bookMovie(callback) {
+        callback();
+    }
+
+    bookMovie(() => {
+        console.log("Booking Confirmed");
+    });
+
+    //Task 7 setTimeout Anonymous Arrow function
+    setTimeout(() => {
+        console.log("Movie Started");
+    }, 2000);
+
+    //Task 8 processOrder Callback
+    function processOrder(callback) {
+        console.log("Order Received");
+        callback();
+    }
+
+    processOrder(() => {
+        console.log("Order Delivered");
+    });
+
+    //Task 9 Counter closure
+    function counter() {
+        let count = 0;
+
+          return function () {
+            count++;
+            console.log("Count:", count);
+        };    
+    }
+
+    const increment = counter();
+
+    increment();
+    increment();
+    increment();
+
+    //Task 10 Banking closure
+    function bankAccount() {
+        let balance = 5000;
+
+        return {
+            deposit:function (amount) {
+                balance += amount;
+                console.log("Deposited:", amount);
+            },
+
+            withdraw: function (amount) {
+                balance -= amount;
+                console.log("Withdrawn:", amount);
+            },
+         
+            checkBalance: function () {
+                 console.log("Final Balance:", balance);
+            }
+        };  
+    }
+
+    const account = bankAccount();
+    account.deposit(1000);
+    account.withdraw(500);
+    account.checkBalance();
+
+</script>
