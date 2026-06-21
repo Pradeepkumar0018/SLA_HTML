@@ -1,0 +1,141 @@
+<script>
+    // Task 1 - let
+
+    let name = "Pradeep";
+    console.log("Before Change:", name);
+
+    name = "Sudhan";
+    console.log("After Change:", name);
+
+
+    // Task 2 - let Scope
+    if (true) {
+        let message = "Hello JavaScript";
+        console.log("Inside Block:", message);
+    }
+
+
+    // Task 3 - const
+
+    const course = "MERN";
+    console.log("Course:", course);
+
+
+
+    // Task 4 - Arrow Function
+
+    const greet = () => {
+        console.log("Welcome To JavaScript");
+    };
+
+    greet();
+
+
+    // Task 5 - Arrow Function With Parameters
+
+    const showHero = (heroName) => {
+        console.log(`Hero Name : ${heroName}`);
+    };
+
+    showHero("Vijay");
+
+
+    // Task 6 - Arrow Function Addition
+
+    const add = (a, b) => {
+        console.log(a + b);
+    };
+
+    add(10, 20);
+
+
+    // Task 7 - Template Literals
+
+    let hero = "Vijay";
+
+    console.log(`My Favourite Hero is ${hero}`);
+
+
+    // Task 8 - Template Literals Multiple Values
+
+    let studentName = "Pradeep";
+    let studentCourse = "MERN";
+    let city = "Chennai";
+
+    console.log(
+        `My name is ${studentName}, I am studying ${studentCourse} and I live in ${city}.`
+    );
+
+
+
+    // Task 9 - Array Destructuring
+
+    let heroes = ["Vijay", "Ajith", "Suriya"];
+
+    let [hero1, hero2] = heroes;
+
+    console.log("Hero 1:", hero1);
+    console.log("Hero 2:", hero2);
+
+
+
+    // Task 10 - Object Destructuring
+
+    let student = {
+        name: "Sudhan",
+        course: "MERN",
+        city: "Chennai"
+    };
+
+    let { name: studentName2, course: studentCourse2 } = student;
+
+    console.log("Name:", studentName2);
+    console.log("Course:", studentCourse2);
+
+
+    // Task 11 - Spread Operator (Array Copy)
+
+    let skills = ["HTML", "CSS", "JavaScript"];
+
+    let newSkills = [...skills, "React"];
+
+    console.log(newSkills);
+
+
+
+    // Task 12 - Spread Operator (Merge Arrays)
+
+    let heroes1 = ["Vijay", "Ajith"];
+    let heroes2 = ["Suriya", "SK"];
+
+    let allHeroes = [...heroes1, ...heroes2];
+
+    console.log(allHeroes);
+
+
+    // Task 13 - Spread Operator (Object Copy)
+
+    let person = {
+        name: "Sudhan",
+        city: "Chennai"
+    };
+
+    let updatedPerson = {
+        ...person,
+        course: "MERN"
+    };
+
+    console.log(updatedPerson);
+
+
+
+    // Task 14 - Rest Parameter
+
+    const total = (...numbers) => {
+        console.log(numbers);
+    };
+
+    total(10, 20, 30, 40);
+
+
+</script>
