@@ -1,0 +1,182 @@
+<script>
+
+    // Task 1
+    const heroes1 = [
+        "Vijay",
+        "Ajith",
+        "Suriya"
+    ];
+
+    const upperHeroes = heroes1.map(hero => hero.toUpperCase());
+
+    console.log(upperHeroes);
+
+    // Task 2
+    const collections1 = [
+        100,
+        200,
+        300,
+        400
+    ];
+
+    const updatedCollections = collections1.map(amount => amount * 10);
+
+    console.log(updatedCollections);
+
+    // Task 3
+    const movies1 = [
+        "GOAT",
+        "LEO",
+        "MASTER"
+    ];
+
+    const movieList = movies1.map(movie => `Movie : ${movie}`);
+
+    console.log(movieList);
+
+    // Task 4
+    const collections2 = [
+        100,
+        500,
+        800,
+        200,
+        900
+    ];
+
+    const filteredCollections = collections2.filter(collection => collection > 500);
+
+    console.log(filteredCollections);
+
+    // Task 5
+    const marks1 = [
+        35,
+        80,
+        20,
+        90,
+        45
+    ];
+
+    const passedStudents = marks1.filter(mark => mark >= 35);
+
+    console.log(passedStudents);
+
+    // Task 6
+    const heroes2 = [
+        "Vijay",
+        "Ajith",
+        "SK",
+        "Suriya"
+    ];
+
+    const longNames = heroes2.filter(hero => hero.length > 4);
+
+    console.log(longNames);
+
+    // Task 7
+    const heroes3 = [
+        "Vijay",
+        "Ajith",
+        "Suriya"
+    ];
+
+    const foundHero = heroes3.find(hero => hero === "Ajith");
+
+    console.log(foundHero);
+
+    // Task 8
+    const collections3 = [
+        100,
+        500,
+        800,
+        200
+    ];
+
+    const foundCollection = collections3.find(collection => collection > 400);
+
+    console.log(foundCollection);
+
+    // Task 9
+    const heroes4 = [
+        "Vijay",
+        "Ajith",
+        "Suriya"
+    ];
+
+    const heroIndex = heroes4.findIndex(hero => hero === "Suriya");
+
+    console.log(heroIndex);
+
+    // Task 10
+    const movies2 = [
+        "GOAT",
+        "Leo",
+        "Master"
+    ];
+
+    const movieIndex = movies2.findIndex(movie => movie === "Leo");
+
+    console.log(movieIndex);
+
+    // Task 11
+    const marks2 = [
+        35,
+        80,
+        20,
+        90
+    ];
+
+    const hasFailedStudent = marks2.some(mark => mark < 35);
+
+    console.log(hasFailedStudent);
+
+    // Task 12
+    const collections4 = [
+        100,
+        200,
+        900
+    ];
+
+    const crossed800 = collections4.some(collection => collection > 800);
+
+    console.log(crossed800);
+
+    // Task 13
+    const marks3 = [
+        50,
+        70,
+        90,
+        40
+    ];
+
+    const allPassed = marks3.every(mark => mark >= 35);
+
+    console.log(allPassed);
+
+    // Task 14
+    const ages1 = [
+        20,
+        25,
+        30,
+        35
+    ];
+
+    const allAdults = ages1.every(age => age > 18);
+
+    console.log(allAdults);
+
+    // Task 15
+    const collections5 = [
+        100,
+        200,
+        300,
+        400
+    ];
+
+    const totalCollection = collections5.reduce(
+        (total, collection) => total + collection,
+        0
+    );
+
+    console.log(totalCollection);
+
+</script>
