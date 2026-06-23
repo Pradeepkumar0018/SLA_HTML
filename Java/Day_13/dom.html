@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Tasks</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-10">
+
+    <div class="max-w-3xl mx-auto space-y-8">
+
+        <!-- Task 1 -->
+        <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-bold mb-4">Task 1 - Change Heading Text</h2>
+
+            <h1 id="title" class="text-3xl font-bold mb-4">
+                Welcome
+            </h1>
+
+            <button onclick="changeHeading()"
+                class="bg-blue-500 text-white px-4 py-2 rounded">
+                Change Heading
+            </button>
+        </div>
+
+        <!-- Task 2 -->
+        <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-bold mb-4">Task 2 - Change Paragraph</h2>
+
+            <p class="course text-lg mb-4">
+                React
+            </p>
+
+            <button onclick="changeCourse()"
+                class="bg-green-500 text-white px-4 py-2 rounded">
+                Change Paragraph
+            </button>
+        </div>
+
+        <!-- Task 3 -->
+        <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-bold mb-4">Task 3 - Change Input Value</h2>
+
+            <input
+                id="username"
+                type="text"
+                class="border p-2 rounded w-full mb-4"
+                placeholder="Enter Name"
+            >
+
+            <button onclick="changeInput()"
+                class="bg-purple-500 text-white px-4 py-2 rounded">
+                Set Value
+            </button>
+        </div>
+
+        <!-- Task 4 -->
+        <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-bold mb-4">Task 4 - Change Image</h2>
+
+            <img
+                id="hero"
+                src="../Assets/Images/2.png"
+                class="w-48 mb-4 rounded"
+            >
+
+            <button onclick="changeImage()"
+                class="bg-orange-500 text-white px-4 py-2 rounded">
+                Change Image
+            </button>
+        </div>
+
+        <!-- Task 5 -->
+        <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-bold mb-4">Task 5 - Change Link</h2>
+
+            <a
+                id="website"
+                href="#"
+                class="text-blue-600 underline block mb-4"
+            >
+                Visit
+            </a>
+
+            <button onclick="changeLink()"
+                class="bg-red-500 text-white px-4 py-2 rounded">
+                Change Link
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+
+        function changeHeading() {
+            document.getElementById("title").innerText =
+                "Welcome to JavaScript DOM";
+        }
+
+        function changeCourse() {
+            document.querySelector(".course").innerText =
+                "MERN Stack";
+        }
+
+        function changeInput() {
+            document.getElementById("username").value =
+                "Sudhan";
+        }
+
+        function changeImage() {
+            document.querySelector("#hero").src =
+                "../Assets/imgs/dom.png";
+        }
+
+        function changeLink() {
+            document.getElementById("website").href =
+                "https://google.com";
+        }
+
+    </script>
+
+</body>
+</html>
