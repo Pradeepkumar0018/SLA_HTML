@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fetch API Task</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    padding:20px;
+}
+
+#cards{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    width:220px;
+    border:1px solid gray;
+    padding:10px;
+    text-align:center;
+}
+
+.card img{
+    width:150px;
+    height:150px;
+    object-fit:contain;
+}
+
+button{
+    padding:8px 15px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+table{
+    width:100%;
+    margin-top:30px;
+    border-collapse:collapse;
+}
+
+th,td{
+    border:1px solid black;
+    padding:10px;
+    text-align:center;
+}
+
+</style>
+
+</head>
+<body>
+
+<h2>Products</h2>
+
+<div id="cards"></div>
+
+<hr>
+
+<h2>Saved Products</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>S.No</th>
+<th>Title</th>
+<th>Brand</th>
+<th>Category</th>
+<th>Price</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tableData">
+
+</tbody>
+
+</table>
+
+<script>
+
+let cards = document.getElementById("cards");
+let tableData = document.getElementById("tableData");
+
+const DataTake = async()=>{
+
+    const datas = await fetch("https://dummyjson.com/products");
+
+    const res = await datas.json();
+
+    const result = res.products;
+
+    result.forEach((e)=>{
+
+        cards.innerHTML += `
+
+        <div class="card">
+
+            <img src="${e.thumbnail}">
+
+            <h3>${e.title}</h3>
+
+            <p>Brand : ${e.brand}</p>
+
+            <p>Category : ${e.category}</p>
+
+            <p>Price : ₹${e.price}</p>
+
+            <button onclick="saveData(${e.id})">
+            Save
+            </button>
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+DataTake();
+
+async function saveData(id){
+
+    const datas = await fetch(`https://dummyjson.com/products/${id}`);
+
+    const res = await datas.json();
+
+    let saved = JSON.parse(localStorage.getItem("products")) || [];
+
+    let check = saved.find((e)=>e.id===res.id);
+
+    if(check){
+
+        alert("Already Saved");
+
+        return;
+
+    }
+
+    saved.push(res);
+
+    localStorage.setItem("products",JSON.stringify(saved));
+
+    showTable();
+
+}
+
+function showTable(){
+
+    let saved = JSON.parse(localStorage.getItem("products")) || [];
+
+    tableData.innerHTML="";
+
+    saved.forEach((e,i)=>{
+
+        tableData.innerHTML +=`
+
+        <tr>
+
+        <td>${i+1}</td>
+
+        <td>${e.title}</td>
+
+        <td>${e.brand}</td>
+
+        <td>${e.category}</td>
+
+        <td>₹${e.price}</td>
+
+        </tr>
+
+        `;
+
+    });
+
+}
+
+showTable();
+
+</script>
+
+</body>
+</html>
