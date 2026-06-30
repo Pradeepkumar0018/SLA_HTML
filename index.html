@@ -79,6 +79,29 @@
     border: 1px solid #1e293b;
   }
 
+  .assignment-cell {
+    max-width: 260px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .assignment-cell:hover {
+    text-decoration: underline;
+    text-decoration-color: #818cf8;
+    text-underline-offset: 3px;
+  }
+  @media (max-width: 640px) {
+    .assignment-cell { max-width: 140px; }
+  }
+
+  #taskModal {
+    transition: opacity 0.2s ease;
+  }
+  #taskModal .modal-box {
+    animation: fadeUp 0.2s ease both;
+  }
+
   tbody tr:last-child td { border-bottom: none !important; }
 
   @keyframes fadeUp {
@@ -109,6 +132,7 @@
       <a href="#bootstrap" class="text-slate-400 hover:text-amber-400 transition">Bootstrap</a>
       <a href="#tailwind" class="text-slate-400 hover:text-emerald-400 transition">Tailwind</a>
       <a href="#javascript" class="text-slate-400 hover:text-yellow-400 transition">JavaScript</a>
+      <a href="#task" class="text-slate-400 hover:text-rose-400 transition">Task</a>
     </div>
   </div>
 </nav>
@@ -155,6 +179,10 @@
     <div class="stat-card bg-gradient-to-br from-yellow-400 to-yellow-600 p-6 rounded-2xl">
     <p class="text-yellow-100 text-sm font-medium">JavaScript Tasks</p>
     <p class="mono text-5xl font-bold mt-2">27</p>
+    </div>
+    <div class="stat-card bg-gradient-to-br from-rose-500 to-pink-600 p-6 rounded-2xl">
+    <p class="text-rose-100 text-sm font-medium">Task</p>
+    <p class="mono text-5xl font-bold mt-2">1</p>
     </div>
   </div>
 </section>
@@ -674,6 +702,52 @@
   </div>
 </section>
 
+<!-- Task -->
+<section id="task" class="max-w-7xl mx-auto px-6 py-10">
+  <h2 class="text-3xl font-bold mb-10 text-rose-400">Task</h2>
+  <div class="table-container">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-slate-800/80 text-slate-300 text-xs uppercase tracking-wider">
+          <th class="text-left px-6 py-4">Technology</th>
+          <th class="text-left px-6 py-4">Day</th>
+          <th class="text-left px-6 py-4">Assignment</th>
+          <th class="text-left px-6 py-4">Open</th>
+        </tr>
+         <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-rose-500/20 text-rose-300">Task</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 1</td>
+          <td class="px-6 py-4 text-white font-medium">Palindrome</td>
+          <td class="px-6 py-4"><a href="Place-x_Tasks/Day_1/d1.js" class="open-btn bg-rose-600 hover:bg-rose-500 text-white">Open</a></td>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Add new Task rows below this line, following the pattern:
+        <tr class="searchable border-b border-slate-800 hover:bg-slate-800/40">
+          <td class="px-6 py-4"><span class="badge bg-rose-500/20 text-rose-300">Task</span></td>
+          <td class="px-6 py-4 text-slate-400">Day 1</td>
+          <td class="px-6 py-4 text-white font-medium">Assignment Name</td>
+          <td class="px-6 py-4"><a href="Task/Day_1/file.html" class="open-btn bg-rose-600 hover:bg-rose-500 text-white">Open</a></td>
+        </tr>
+        -->
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Task Detail Modal -->
+<div id="taskModal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+  <div class="modal-box bg-slate-900 border border-slate-700 rounded-2xl p-6 max-w-lg w-full">
+    <div class="flex justify-between items-start gap-4 mb-2">
+      <span id="modalBadge" class="badge"></span>
+      <button onclick="closeTaskModal()" class="text-slate-400 hover:text-white text-2xl leading-none">&times;</button>
+    </div>
+    <h3 id="modalTitle" class="text-lg font-semibold text-white mt-3 mb-1 leading-snug"></h3>
+    <p id="modalDay" class="text-slate-400 text-sm mb-5"></p>
+    <a id="modalOpenBtn" href="#" class="open-btn bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2.5">Open Task</a>
+  </div>
+</div>
+
 <!-- Footer -->
 <footer class="mt-20 border-t border-slate-800/60">
   <div class="max-w-7xl mx-auto px-6 py-12 text-center">
@@ -687,6 +761,7 @@
       <span class="badge bg-amber-500/20 text-amber-300">Bootstrap</span>
       <span class="badge bg-emerald-500/20 text-emerald-300">Tailwind CSS</span>
       <span class="badge bg-emerald-500/20 text-emerald-300">JavaScript</span>
+      <span class="badge bg-rose-500/20 text-rose-300">Task</span>
     </div>
   </div>
 </footer>
@@ -705,6 +780,60 @@
     document.querySelectorAll("section[id]").forEach(section => {
       const visibleRows = section.querySelectorAll("tr.searchable:not([style*='display: none'])");
       section.style.display = visibleRows.length > 0 || filter === "" ? "" : "none";
+    });
+  });
+
+  // --- Long assignment names: truncate + click-to-expand modal ---
+  const taskModal = document.getElementById("taskModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDay = document.getElementById("modalDay");
+  const modalBadge = document.getElementById("modalBadge");
+  const modalOpenBtn = document.getElementById("modalOpenBtn");
+
+  function openTaskModal(title, day, badgeClass, badgeText, url) {
+    modalTitle.textContent = title;
+    modalDay.textContent = day;
+    modalBadge.className = "badge " + badgeClass;
+    modalBadge.textContent = badgeText;
+    modalOpenBtn.href = url;
+    taskModal.classList.remove("hidden");
+    taskModal.classList.add("flex");
+  }
+
+  function closeTaskModal() {
+    taskModal.classList.add("hidden");
+    taskModal.classList.remove("flex");
+  }
+
+  taskModal.addEventListener("click", (e) => {
+    if (e.target === taskModal) closeTaskModal();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeTaskModal();
+  });
+
+  document.querySelectorAll("tr.searchable").forEach(row => {
+    const cells = row.querySelectorAll("td");
+    if (cells.length < 4) return;
+    const badgeEl = cells[0].querySelector(".badge");
+    const dayText = cells[1].textContent.trim();
+    const assignmentCell = cells[2];
+    const link = cells[3].querySelector("a");
+    if (!link) return;
+
+    assignmentCell.classList.add("assignment-cell");
+    assignmentCell.title = assignmentCell.textContent.trim();
+
+    assignmentCell.addEventListener("click", () => {
+      const badgeClasses = badgeEl ? badgeEl.className.replace("badge", "").trim() : "bg-indigo-500/20 text-indigo-300";
+      const badgeText = badgeEl ? badgeEl.textContent.trim() : "";
+      openTaskModal(
+        assignmentCell.textContent.trim(),
+        dayText,
+        badgeClasses,
+        badgeText,
+        link.getAttribute("href")
+      );
     });
   });
 </script>
