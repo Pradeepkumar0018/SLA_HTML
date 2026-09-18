@@ -1,0 +1,97 @@
+
+SQL na enna?
+
+SQL (Structured Query Language) use pannuvanga database-la data store, retrieve, update, delete panna.
+
+Example:
+
+College student details
+Employee details
+Bank customer details
+Amazon products
+
+Ellam database-la store pannuvanga.
+------------------------------------------------------------------------------------------------------------------------------
+Database na enna?
+
+Database = Collection of tables.
+
+Example:
+
+College Database
+------------------------------------------------------------------------------------------------------------------------------
+Datatypes
+
+Different type of data store panna use pannuvom.
+
+INT
+
+Integer numbers
+
+age INT
+----------------------------------------------------------------------------------------------------------------------------------
+VARCHAR
+
+Text store panna.
+------------------------------
+
+| Command                     | Purpose                                  |
+| --------------------------- | ---------------------------------------- |
+| `CREATE DATABASE`           | Create a database                        |
+| `USE`                       | Select the database                      |
+| `CREATE TABLE`              | Create a new table                       |
+| `DESC`                      | View table structure                     |
+| `ALTER TABLE ADD`           | Add a new column                         |
+| `ALTER TABLE MODIFY`        | Change a column's datatype               |
+| `ALTER TABLE CHANGE`        | Rename a column and specify its datatype |
+| `ALTER TABLE RENAME COLUMN` | Rename only the column                   |
+| `ALTER TABLE DROP COLUMN`   | Delete a column                          |
+| `RENAME TABLE`              | Rename the table                         |
+| `TRUNCATE TABLE`            | Delete all rows, keep the table          |
+| `DROP TABLE`                | Delete the entire table                  |
+| `DROP DATABASE`             | Delete the entire database               |
+-------------------------------------------------------------------------------------------------------------------------
+
+What is DDL?
+
+DDL = Data Definition Language
+
+Database objects-a create, modify, rename, delete panna use pannra commands.
+
+Simple-a sonna:
+
+Table structure-ah create/change/delete panna use pannrathu DDL.
+
+DDL Commands
+
+There are mainly 6 commands.
+
+CREATE
+ALTER
+TRUNCATE
+DROP
+RENAME
+------------------------------------------------------------------------------------------------------------------------
+
+What is DML?
+
+DML = Data Manipulation Language
+
+Already create pannina table-kulla data insert, update, delete panna use pannuvom.
+
+Simple definition:
+
+DML is used to manipulate the data stored in a table.
+
+DML Commands
+
+There are 4 important commands.
+
+Command	Use
+INSERT	New data add
+UPDATE	Existing data modify
+DELETE	Existing data delete
+SELECT	Data view (officially DQL, but beginners often learn it here)
+----------------------------------------------------------------------------------------------------------------------------
+
+

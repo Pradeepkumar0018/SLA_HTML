@@ -1,0 +1,73 @@
+1. What is DOM?
+
+DOM (Document Object Model) is a programming interface for HTML and XML documents.
+
+It converts an HTML page into a tree-like structure of objects so that JavaScript can access and manipulate the webpage.
+
+Common DOM Methods:
+         
+             document.getElementById()
+
+             document.getElementsByClassName()
+
+             document.getElementsByTagName()
+
+             document.querySelector()
+
+             document.querySelectorAll()
+
+             document.createElement()
+
+             appendChild()
+
+             remove()
+
+             setAttribute()
+
+2. What is React?
+
+React is a JavaScript library used to build fast, interactive, and reusable user interfaces (UI).
+
+Features:
+        Reusable Components
+        Fast Rendering
+        Virtual DOM
+        Easy to Maintain
+        One-way Data Flow
+        JSX Support
+
+3. What are Components?
+   A Component is a small reusable piece of UI in React.
+   So, most React components are actually JavaScript functions, but not every function is a component.
+
+Example of a React Component
+function Header() {
+    return <h1>Welcome to React</h1>;
+}
+
+
+
+
+4. What are Functions?
+
+A function is a reusable block of JavaScript code that performs a specific task.
+
+A function is a block of code that executes when it is called. It can accept inputs (parameters) and return an output.
+
+Example (JavaScript)
+function add(a, b) {
+    return a + b;
+}
+
+console.log(add(10, 20));
+
+Output:
+
+30
+
+This function simply adds two numbers.
+
+
+
+
+
